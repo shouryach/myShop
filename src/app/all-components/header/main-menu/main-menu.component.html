@@ -1,0 +1,93 @@
+<div class="menu_wrapper">
+  <ion-menu-toggle>
+    <ion-item lines="none" color="custom" class="ion-no-padding" [routerLink]="['/profile-setting']" routerLinkActive="router-link-active" >
+      <img src="assets/images/m1.png" alt="">
+      <ion-label>Profile Setting</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item> 
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item lines="none" color="custom" class="ion-no-padding" [routerLink]="['/categories']" routerLinkActive="router-link-active" >
+      <img src="assets/images/m2.png" alt="">
+      <ion-label>Categories</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+  
+  <ion-menu-toggle>
+    <ion-item lines="none" color="custom" class="ion-no-padding" [routerLink]="['/your-orders']" routerLinkActive="router-link-active" >
+      <img src="assets/images/m3.png" alt="">
+      <ion-label>Your Orders</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item lines="none" color="custom" class="ion-no-padding" [routerLink]="['/about-us']" routerLinkActive="router-link-active" >
+      <img src="assets/images/m4.png" alt="">
+      <ion-label>About Us</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+  
+  <ion-menu-toggle>
+    <ion-item lines="none" class="ion-no-padding" color="custom">
+      <img src="assets/images/m5.png" alt="">
+      <ion-label>Language</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+
+  <ion-menu-toggle>
+    <ion-item lines="none" class="ion-no-padding" color="custom">
+      <img src="assets/images/m6.png" alt="">
+      <ion-label>Term of Use</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item lines="none" class="ion-no-padding" color="custom">
+      <img src="assets/images/m7.png" alt="">
+      <ion-label>Policies</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+
+  
+  <ion-item lines="none" class="ion-no-padding" color="custom" [class.open]="open" (click)="sub_click()">
+    <img src="assets/images/m8.png" alt="">
+    <ion-label>Support</ion-label>
+    <ion-icon slot="end" name="chevron-forward-outline"></ion-icon> 
+  </ion-item>  
+  <div class="sub_menu" [class.open]="open">
+    <ion-menu-toggle>
+      <ion-item lines="none" class="ion-no-padding" color="custom">
+        <img src="assets/images/m10.png" alt="">
+        <ion-label>Chat</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon> 
+      </ion-item>
+    </ion-menu-toggle>
+    <ion-menu-toggle>
+      <ion-item lines="none" class="ion-no-padding" color="custom">
+        <img src="assets/images/m11.png" alt="">
+        <ion-label>Call Us</ion-label>
+        <ion-icon slot="end" name="chevron-forward-outline"></ion-icon> 
+      </ion-item>
+    </ion-menu-toggle>      
+  </div>
+  <ion-menu-toggle>
+    <ion-item lines="none" [routerLink]="['/raise-query']" class="ion-no-padding" color="custom">
+      <img src="assets/images/m8.png" alt="">
+      <ion-label>Raise Query</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon> 
+    </ion-item>
+  </ion-menu-toggle>
+  <ion-menu-toggle>
+    <ion-item lines="none" color="custom" class="no-border ion-no-padding">
+      <img src="assets/images/m9.png" alt="">
+      <ion-label>Logout</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </ion-menu-toggle>
+  
+     
+</div>

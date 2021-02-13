@@ -1,0 +1,60 @@
+.add-new-bank-details{
+    width: 100%; float: left; padding: 18px;
+    .form_back{
+        width: 100%; float: left;
+        .portion{
+            width: 100%;  float: left; border: #0037fc 1px solid; border-radius: 10px; padding: 35px 35px 0 35px; background-color: #fff; margin-bottom: 65px;
+            ion-label{
+                color: rgba(0,0,0,.8); font-size: 24px; text-transform: capitalize; font-weight: 700;
+            }
+            ion-input{
+                width: 100%; height: 50px; float: left; margin: 0 0 20px 0; padding: 0;  --padding-start: 0;    background-color: transparent; font-size: 20px; color: #aaaaaa;
+            }
+            
+        }
+    }
+}
+
+.check-point-back{
+    width: 100%; float: left; margin: 20px 0 20px; padding: 0;
+}
+.check-point-back .radio_back{
+    width: 100%; float: left;   position: relative;
+}
+.check-point-back .radio_back input[type="radio"]{
+    position: absolute; opacity: 0; left: 0;
+}
+.check-point-back .radio_back input[type="radio"] + label{
+    color: #343434; font-size: 24px; font-weight: 700; margin: 0; padding: 20px 35px; width: 100%; float: left; border-radius: 10px; 
+}
+
+.check-point-back .radio_back input[type="radio"] + label span{
+    position: absolute; top: 0; bottom: 0; right: 23px; margin: auto; width: 26px; height: 20px; background-image: url(../../../assets/images/check_line.png); background-size: 100%; opacity: 0;
+} 
+.check-point-back .radio_back input[type="radio"]:checked + label span{ opacity: 1;}
+.check-point-back .radio_back input[type="radio"]:checked + label{
+    box-shadow: rgba(0,0,0,.15) 0 0 31px; background-color: #fff; 
+}
+@media only screen and (max-width:500px){
+    .add-new-bank-details{
+        .form_back{
+            .portion{
+                padding: 13px 20px 0 20px;  margin-bottom: 37px;
+                ion-label{
+                    font-size: 15px;
+                }
+                ion-input{
+                    margin: 0 0 13px 0; font-size: 12px; height: 25px;
+                }
+            }
+        }
+    }
+    .check-point-back{
+       margin: 10px 0 10px;
+    }
+    .check-point-back .radio_back input[type="radio"] + label{
+        padding: 14px 20px;
+    }
+    .check-point-back .radio_back input[type="radio"] + label{ font-size: 14px;}
+    .check-point-back .radio_back input[type="radio"] + label span{ width: 15px; height: 12px; right: 12px;}
+}

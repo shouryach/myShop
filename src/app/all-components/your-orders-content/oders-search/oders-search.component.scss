@@ -1,0 +1,27 @@
+.search_back{
+    width: 100%; height: auto; border-bottom: #ced3dc 1px solid; position: relative; padding: 0 0 0 109px;
+    img{ position: absolute; top: 0; bottom: 0; left: 49px; margin: auto;}
+    ion-input{
+        width: 100%; height: 101px; border: none; outline-style: none; background-color: transparent; font-size: 32px; color: #818181;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .search_back{
+        padding: 0 0 0 60px;
+        img{ height: 24px; left: 18px;}
+        ion-input{
+            height: 50px; font-size: 18px;
+        }  
+    }
+}
+
+@media only screen and (max-width:359px){
+    .search_back{
+        padding: 0 0 0 42px;
+        img{ height: 18px; left: 18px;}
+        ion-input{
+            height: 50px; font-size: 13px;
+        }  
+    }
+}

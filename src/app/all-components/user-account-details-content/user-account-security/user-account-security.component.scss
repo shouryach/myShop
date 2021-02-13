@@ -1,0 +1,56 @@
+.account_security_details{
+    width:100%; margin-top: 50px;
+    h3{
+        font-weight: normal; color: #000000; font-size: 22px; margin: 0 auto; width: 90%;
+    }
+    ion-item{
+        font-weight: 500; color: #0962ff; font-size: 23px; background-color: #fff; width: 100%; text-align: left; text-transform: uppercase; padding: 15px 0 15px 31px;
+        ion-icon{
+            color: #666666; width: 20px;
+        }
+    }
+    p{
+        margin: 0 auto; width: 90%; font-size: 21px; padding-top: 20px; padding-bottom: 60px;
+    }
+    ion-button{
+        width: 90%; height: 98px; background-color: #0962ff; border-radius: 100px; color: #fff; font-weight: normal; box-shadow: none; margin: 0 auto; font-size: 25px; font-weight: 600;
+    }
+    
+}
+
+@media only screen and (max-width:768px){
+    .account_security_details{
+        ion-item{
+            padding: 15px 0 15px 20px;
+        }
+    }
+}
+@media only screen and (max-width:640px){
+    .account_security_details{
+        h3{
+            font-size: 13px;
+        }
+        ion-item{
+            padding: 15px 0 15px 15px; 
+        }
+        p{ font-size: 18px;}
+    }
+}
+@media only screen and (max-width:480px){
+    .account_security_details{
+        ion-item{
+            padding: 10px 0 10px 8px; font-size: 13px;
+        }
+        p{ font-size: 12px; padding-bottom: 40px;}
+        ion-button{ height: 56px;  font-size: 14px; }
+    }
+}
+@media only screen and (max-width:375px){
+    .account_security_details{
+        ion-item{
+            padding: 0 0 0 0; font-size: 14px;
+        }
+        ion-button{ height: 50px;  font-size: 13px; }
+       
+    }
+}

@@ -1,0 +1,36 @@
+.login_social{ 
+    width: 100%; text-align: center; padding: 126px 0 108px;
+    ul.social{
+        display: inline-block; margin: 0; padding: 0;  position: relative;
+        &:after{
+            width: 1px; height: 22px; background-color: #b2b4b6; content: ""; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto;
+        }
+        li{
+            display: flex; align-items: center; justify-content: center; float: left; margin-right: 54px;
+            &:last-child{ 
+                margin-right: 0;
+                
+            }
+            img{ display: block;}
+            
+            
+        }
+    }
+    p{
+        text-transform: uppercase; font-size: 13px; color: #797979; font-weight: 500; margin: 15px 0 0 0;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .login_social{ 
+        padding: 123px 0 30px;
+        ul.social{
+            li{
+               margin-right: 44px;
+               img{
+                width: 32px;
+               }
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.banner_top_slide{
+    width: 100%; display: block;  overflow: hidden; margin-bottom: 18px; padding: 0 18px;
+    .portion{ 
+        width: 100%; position: relative;
+        img{ width: 100%; height: auto; border-radius: 20px;}
+   }
+   
+}
+
+
+@media only screen and (max-width:500px){
+   .banner_top_slide{
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+}

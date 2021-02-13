@@ -1,0 +1,27 @@
+<ion-header no-shadow class="shop">
+  <header class="header">
+    <ion-toolbar color="custom" lines="no-lines" class="no-border">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="" icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons>
+      <ion-title text-left>
+        <span>Men T-Shirts</span><br>
+        34873 Items 
+      </ion-title>
+      <ion-buttons slot="end">
+        <ul class="right_icon_details">
+          <li (click)="searchModel()"><img src="assets/images/search.png" alt=""></li>
+          <li><img src="assets/images/heart.png" alt=""></li>
+          <li>
+            <img src="assets/images/bag.png" alt="">
+            <span>0</span>
+          </li>
+        </ul>
+      </ion-buttons>
+    </ion-toolbar>
+  </header>
+</ion-header>
+
+<ion-content>
+  <app-shop-contents></app-shop-contents>
+</ion-content>

@@ -1,0 +1,13 @@
+<div class="button_back_top">
+    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">skip >></ion-button>
+</div>
+<ion-slides pager="true" [options]="slideOpts" class="entrypoint_slides">
+  <ion-slide *ngFor="let flashScreen of flashScreens">
+      <div class="slide-image"><img src="{{flashScreen.image}}" alt=""></div>
+  </ion-slide>
+</ion-slides>
+
+<div class="button_back">
+    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">Login</ion-button>
+    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">signup</ion-button>
+</div>

@@ -1,0 +1,29 @@
+<div class="forgot_details">
+  <ion-buttons slot="start" class="back">
+    <ion-back-button defaultHref="/" text="BACK" icon="chevron-back-outline"></ion-back-button>
+  </ion-buttons>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Forgot<br>Password ?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Please enter your mobile number<br>
+      and we will send you the OTP<br>
+      immidiately. 
+    </ion-card-content>
+  </ion-card>
+  <form action="" class="form">
+    <ion-item class="ion-no-padding">
+      <ion-label position="floating">Mobile Number</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <div class="button_back">
+      <div class="details" [routerLink]="['/verify-otp']" routerLinkActive="router-link-active" >
+        <div class="icon_holder">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+        SEND
+      </div>
+    </div>
+  </form>
+</div>

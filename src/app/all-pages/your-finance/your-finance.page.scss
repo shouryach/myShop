@@ -1,0 +1,88 @@
+.nested_route{ width: 100%; float: left;}
+/*ion-tabs{
+    width: 100%; height: auto;  float: left; margin: 0; padding: 0; flex: auto; 
+    ion-tab-bar{
+        border-bottom: #ced3dc 1px solid; height: 104px;
+        ion-tab-button{
+            color: #818181; font-weight: normal; font-size: 26px; text-transform: capitalize; float: left; list-style: none; position: relative;
+        }
+    }
+    
+}*/
+.orders_menu{ 
+    width: 100%; height: auto; border-bottom: #ced3dc 1px solid; position: relative; float: left; margin: 0; padding: 0;
+    li{
+        padding: 35px 20px; color: #818181; font-weight: normal; font-size: 26px; text-transform: capitalize; float: left; list-style: none; position: relative;
+        &.router-link-active{
+            color: #0962ff; font-weight: 700;
+            &:after{
+                width: 100%; opacity: 1;
+            }
+        }
+        &:after{ width: 0%; height: 2px; position: absolute; bottom: 0; left: 0; right: 0; background-color: #0962ff; content: ""; opacity: 0;}
+    }
+}
+.tabs-inner{ padding: 30px; width: 100%}
+@media only screen and (max-width:767px){
+    .orders_menu{ 
+        li{
+            padding: 30px 12px; font-size: 24px;
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    .search_back{
+        padding: 0 0 0 60px;
+        img{ height: 24px; left: 18px;}
+        ion-input{
+            height: 56px; font-size: 18px;
+        }  
+    }
+    .orders_menu{ 
+        li{
+            padding: 15px 6px; font-size: 12px;
+            &:focus{
+                outline-style: none;
+            }
+        }
+    }
+    .right_icon_details{
+        &.cart_icon{
+            li{
+                img{
+                    height: 21px !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media only screen and (max-width:400px){
+    .orders_menu{ 
+        li{
+            padding: 21px 8px; font-size: 14px;
+        }
+    }
+}
+@media only screen and (max-width:359px){
+    .orders_menu{ 
+        li{
+            padding: 15px 6px; font-size: 12px;
+            &:focus{
+                outline-style: none;
+            }
+        }
+    }
+    .oders_details_back .portion .order_pending{
+        padding: 0 0 0 85px;
+    }
+   
+}
+
+
+.orders{
+    background-color: #fff;
+}

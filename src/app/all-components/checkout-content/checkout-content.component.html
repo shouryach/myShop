@@ -1,0 +1,127 @@
+<div class="shopping_bag">
+  <div class="wrap">
+    <div class="avail_offer">
+
+      <ul class="list">
+        <li>5% Unlimited Cashback on Flipkart Axis Bank Credit
+          Card. TCA</li>
+        <ng-container *ngIf="avail">
+          <li>10% Cashback upto Rs 300 on a minimum spend of Rs
+            1,000 with PayZapp. TCA</li>
+          <li>10% Cashback up to Rs 100 on first ever Freecharge
+            transaction on Myntra. TCA</li>
+          <li>Flat Rs.200 Cashback on first Airtel Payments Bank
+            transaction on Myntra on a min spend of Rs.250. TCA</li>
+          <li>10% Supercash up to Rs. 20 on transaction with
+            MobiKwik. TCA</li>
+        </ng-container>
+      </ul>
+      <div class="show_hide" (click)="expand()" [class.active]="active">
+        <span *ngIf="more">show more</span>
+        <span *ngIf="less">show less</span>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>
+
+    </div>
+
+    <div class="payment_option_back">
+      <ion-label>PAYMENT OPTIONS</ion-label>
+      <div class="details">
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>pay on delivery (cash/card/upi)</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>credit/debit card</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>phonepe/gogle pay/bhim upi</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>paytm/payzapp/wallets</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>net banking</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+        <div class="portion nopadding">
+          <ion-item lines="none" color="custom">
+            <ion-label>gift card</ion-label>
+            <ion-button color="custom" fill="clear">
+              Select
+            </ion-button>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+
+    <div class="oders_details_back">
+      <div class="portion">
+        <div class="payment_details">
+          <h3>PRICE DETAILS (1 Item)</h3>
+          <div class="order_table shop">
+            <ul class="body">
+              <li>
+                <div class="del">Order Total :</div>
+                <div class="del">549</div>
+              <li>
+              <li>
+                <div class="del">Platform Handling Fee</div>
+                <div class="del free"><span>99</span> FREE</div>
+              </li>
+            </ul>
+            <ul class="foot">
+              <li>
+                <div class="del"><strong>Total</strong></div>
+                <div class="del"><strong>549</strong></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <div class="price">
+          549<br><span>VIEW DETAILS</span>
+        </div>
+
+      </ion-col>
+      <ion-col size="7">
+        <div class="button_back">
+          <ion-button [routerLink]="['/payment-type']" routerLinkActive="router-link-active" expand="block"
+            fill="clear" shape="round">pay now</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

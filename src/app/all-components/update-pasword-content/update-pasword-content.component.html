@@ -1,0 +1,26 @@
+<div class="forgot_details">
+  <ion-buttons slot="start" class="back">
+    <ion-back-button defaultHref="/" text="BACK" icon="chevron-back-outline"></ion-back-button>
+  </ion-buttons>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Update your<br>password</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Please enter your new password. 
+    </ion-card-content>
+  </ion-card>
+  <form action="" class="form">
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <div class="button_back">
+      <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/pasword-reset']" routerLinkActive="router-link-active" >Reset Password</ion-button>
+    </div>
+  </form>
+</div>

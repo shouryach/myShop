@@ -1,0 +1,93 @@
+<ng-container 
+*ngIf="router.url === '/entrypoint'  ||
+router.url === '/login'  || 
+router.url === '/forgot-password'  ||
+router.url === '/verify-otp'  ||
+router.url === '/update-password'  ||
+router.url === '/pasword-reset'  || 
+router.url === '/auth-signup'  ||
+router.url === '/verify-otp-register'  ||
+router.url === '/profile-setting'  ||
+router.url === '/user-account'  ||
+router.url === '/account-settings'  ||
+router.url === '/business-details'  ||
+router.url === '/select-address'  ||
+router.url === '/add-new-address'  ||
+router.url === '/setup-profile'  ||
+router.url === '/about-us'  ||
+router.url === '/shop-details'  ||
+router.url === '/wishlist'  ||
+router.url === '/shopping-bag'  ||
+router.url === '/select-user-address'  ||
+router.url === '/checkout'  ||
+router.url === '/payment-type'  ||
+router.url === '/add-bank-details'  ||
+router.url === '/add-new-bank-details'  ||
+router.url === '/language'  ||
+router.url === '/help-center'  ||
+router.url === '/change-month'  ||
+router.url === '/payment-method'  ||
+router.url === '/manage-account'  ||
+router.url === '/other-account'  ||
+router.url === '/raise-query'  ||
+router.url === '/product-status'  ||
+router.url === '/your-finance/overview'  ||
+router.url === '/your-finance/general-ledger'  ||
+router.url === '/register'; then blankfooter; else mainfooter">
+</ng-container>
+
+
+
+
+<ng-template #blankfooter></ng-template>
+<ng-template #mainfooter>
+    <div class="footer">
+        <ion-footer class="ion-no-border">
+        <ion-toolbar>
+          <ion-grid>
+            <ion-row>
+              <ion-col [routerLink]="['/home']" routerLinkActive="router-link-active" >
+                <div class="port">
+                  <img src="assets/images/f1.png" alt="">
+                  <div class="clear"></div>
+                  <ion-label>Home</ion-label>
+                </div>
+              </ion-col>
+              <ion-col  [routerLink]="['/categories']" routerLinkActive="router-link-active" >
+                <div class="port">
+                  <img src="assets/images/f2.png" alt="">
+                  <div class="clear"></div>
+                  <ion-label>Categories</ion-label>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="port">
+                  <img src="assets/images/f3.png" alt="">
+                  <div class="clear"></div>
+                  <ion-label>chat</ion-label>
+                </div>                
+              </ion-col>
+              <ion-col>
+                <div class="port">
+                  <img src="assets/images/f4.png" alt="">
+                  <div class="clear"></div>
+                  <ion-label>notifications</ion-label>
+                </div>
+                
+              </ion-col>
+              <ion-col [routerLink]="['/shop']" routerLinkActive="router-link-active">
+                <div class="port">
+                  <img src="assets/images/f5.png" alt="">
+                  <div class="clear"></div>
+                  <ion-label>bag</ion-label>
+                </div>
+                
+              </ion-col>
+              
+            </ion-row>
+            </ion-grid>
+        </ion-toolbar>
+        </ion-footer>
+    </div>
+    
+</ng-template>

@@ -1,0 +1,248 @@
+<div class="shopping_bag">
+    <div class="avail_offer">
+      <h2>
+        <img src="assets/images/offer2.png" alt="">
+        Available Offers
+      </h2>
+      <ul class="list">
+        <li>5% Unlimited Cashback on Flipkart Axis Bank Credit
+          Card. TCA</li>
+          <ng-container *ngIf="avail">
+            <li>10% Cashback upto Rs 300 on a minimum spend of Rs
+              1,000 with PayZapp. TCA</li>
+            <li>10% Cashback up to Rs 100 on first ever Freecharge
+              transaction on Myntra. TCA</li>
+            <li>Flat Rs.200 Cashback on first Airtel Payments Bank
+              transaction on Myntra on a min spend of Rs.250. TCA</li>
+            <li>10% Supercash up to Rs. 20 on transaction with
+              MobiKwik. TCA</li>
+          </ng-container>
+      </ul>
+      <div class="show_hide" (click)="expand()" [class.active]="active">
+        <span *ngIf="more">show more</span>
+        <span *ngIf="less">show less</span>
+        <ion-icon name="chevron-down-outline"></ion-icon>
+      </div>      
+      
+    </div>
+    <div class="handling_fee_bar">
+      <img src="assets/images/delivary_car.png" alt="">
+      Yay! <strong>No handling fee</strong> on this order
+    </div>
+    <div class="product_details">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <div class="image_avator"><img src="assets/images/pro1.jpg" alt=""></div>
+          </ion-col>
+          <ion-col size="8">
+            <div class="details">
+              <h3>Single</h3>
+              <h4>Men Navy Blue Colourblocked Sli..</h4>
+              <p>Sold By: Supercom Net</p>
+              <div class="tag">Pcs: 5</div>
+              <div class="tag">Qty: 1</div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="button_back">
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="5">
+              <ion-button expand="block" fill="clear" shape="round" color="custom" >
+                Remove
+              </ion-button>
+            </ion-col>
+            <ion-col size="7">
+              <ion-button [routerLink]="['/wishlist']" expand="block" fill="clear" shape="round" color="custom">
+                Move to wishlist
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="handling_fee_bar wishlist" [routerLink]="['/wishlist']">
+      <ion-icon slot="first" name="bookmark-outline" class="bookmark"></ion-icon>
+      Add More From Wishlist
+      <ion-icon slot="end" name="chevron-forward-outline" class="arrow"></ion-icon>
+    </div>
+    <div class="wishlist_content">
+      <h2>You may also like:</h2>
+      <ion-slides pager="false" [options]="slideOpts">
+        <ion-slide>
+          <ion-card [routerLink]="['/shop']">
+            <div class="image_back">
+              <img src="assets/images/w-p1.jpg" alt="">
+            </div>
+            <div class="cover">
+              <ion-card-header>
+                <ion-card-title>SINGLE</ion-card-title>
+                <ion-card-subtitle> Men Printed Round Neck T-sh...</ion-card-subtitle>            
+              </ion-card-header>
+              <ion-card-content>
+                <div class="contentarea">
+                  <div class="pricearea">
+                    <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+                    <span class="main_price"><img src="assets/images/rupee.png" alt="">779</span>
+                    <span class="discount">50% OFF,Hurry*</span>                      
+                  </div>
+                </div>
+              </ion-card-content>
+              <ion-button expand="block" fill="clear" shape="round">
+                Add To Bag
+              </ion-button>
+            </div>
+            
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card [routerLink]="['/shop']">
+            <div class="image_back">
+              <img src="assets/images/w-p1.jpg" alt="">
+              
+            </div>
+            <div class="cover">
+              <ion-card-header>
+                <ion-card-title>SINGLE</ion-card-title>
+                <ion-card-subtitle> Men Printed Round Neck T-sh...</ion-card-subtitle>            
+              </ion-card-header>
+              <ion-card-content>
+                <div class="contentarea">
+                  <div class="pricearea">
+                    <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+                    <span class="main_price"><img src="assets/images/rupee.png" alt="">779</span>
+                    <span class="discount">50% OFF,Hurry*</span>                      
+                  </div>
+                  
+                </div>
+              </ion-card-content>
+              <ion-button expand="block" fill="clear" shape="round">
+                Add To Bag
+              </ion-button>
+            </div>
+           
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card [routerLink]="['/shop']">
+            <div class="image_back">
+              <img src="assets/images/w-p1.jpg" alt="">
+              
+            </div>
+            <div class="cover">
+              <ion-card-header>
+                <ion-card-title>SINGLE</ion-card-title>
+                <ion-card-subtitle> Men Printed Round Neck T-sh...</ion-card-subtitle>            
+              </ion-card-header>
+              <ion-card-content>
+                <div class="contentarea">
+                  <div class="pricearea">
+                    <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+                    <span class="main_price"><img src="assets/images/rupee.png" alt="">779</span>
+                    <span class="discount">50% OFF,Hurry*</span>                      
+                  </div>
+                  
+                </div>
+              </ion-card-content>
+              <ion-button expand="block" fill="clear" shape="round">
+                Add To Bag
+              </ion-button>
+            </div>
+           
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card [routerLink]="['/shop']">
+            <div class="image_back">
+              <img src="assets/images/w-p1.jpg" alt="">
+            </div>
+            <div class="cover">
+              <ion-card-header>
+                <ion-card-title>SINGLE</ion-card-title>
+                <ion-card-subtitle> Men Printed Round Neck T-sh...</ion-card-subtitle>            
+              </ion-card-header>
+              <ion-card-content>
+                <div class="contentarea">
+                  <div class="pricearea">
+                    <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+                    <span class="main_price"><img src="assets/images/rupee.png" alt="">779</span>
+                    <span class="discount">50% OFF,Hurry*</span>                      
+                  </div>
+                  
+                </div>
+              </ion-card-content>
+              <ion-button expand="block" fill="clear" shape="round">
+                Add To Bag
+              </ion-button>
+            </div>
+            
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </div>
+    <div class="coupon">
+      <p>Coupons</p>
+      <div class="handling_fee_bar wishlist">
+        <img src="assets/images/tag.png" alt="">
+        Apply Coupon
+      </div>
+    </div>
+    
+    <div class="oders_details_back">
+      <div class="portion">
+        <div class="payment_details">
+          <h3>PRICE DETAILS (1 Item)</h3>
+          <div class="order_table shop">
+            <ul class="body">
+              <li>
+                <div class="del">Bag Total :</div>
+                <div class="del">1,099</div>
+              </li>
+              <li>
+                <div class="del">Bag discount :</div>
+                <div class="del discount">-550</div>
+              </li>
+              <li>
+                <div class="del" class="del">Coupon Discount :</div>
+                <div class="del coupon">Apply Coupon</div>
+              </li>
+              <li>
+                <div class="del">Order Total :</div>
+                <div class="del">549</div>
+              <li>
+                <li>
+                  <div class="del">Platform Handling Fee</div>
+                  <div class="del free"><span>99</span> FREE</div>
+                </li>
+            </ul>
+            <ul class="foot">
+              <li>
+                <div class="del"><strong>Total</strong></div>
+                <div class="del"><strong>549</strong></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="footer">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5">
+        <div class="price">
+          549<br><span>VIEW DETAILS</span>
+        </div>
+        
+      </ion-col>
+      <ion-col size="7">
+        <div class="button_back">
+          <ion-button [routerLink]="['/select-user-address']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">place order</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

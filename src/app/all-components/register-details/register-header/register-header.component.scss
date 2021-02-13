@@ -1,0 +1,58 @@
+.form_header{
+    width: 100%; height: 335px; background-color: #1266f9; display: flex; align-items: center; justify-content: left; text-align: left; border-radius: 0 0 50px 50px; position: relative;
+    ion-card{
+        background-color: transparent; box-shadow: none; padding-top: 70px;
+        ion-card-title{
+            color: #fff; font-weight: 300; font-size: 62px; text-transform: capitalize; margin: 0 0 34px 0; padding: 0 0 0 46px;
+        }
+        
+    }
+    .back{ 
+        text-transform: uppercase; color: #fff; cursor: pointer; position: absolute; top: 54px; left: 57px;
+        ion-back-button{
+            font-size: 26px; font-weight: normal;
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    .form_header{
+        height: 192px; border-radius: 0 0 30px 30px;
+        ion-card{
+            padding-top: 33px;
+            ion-card-title{
+                font-size: 26px; margin: 17px 0 15px 0; padding: 0 0 0 6px;
+            }
+        }
+        .back{
+            top: 35px; left: 12px;
+            ion-back-button{
+                font-size: 15px;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:359px){
+    .form_header{
+        height: 192px; border-radius: 0 0 30px 30px;
+        ion-card{
+            padding-top: 33px;
+            ion-card-title{
+                font-size: 24px; margin: 17px 0 15px 0; padding: 0 0 0 6px;
+            }
+        }
+        .back{
+            top: 35px; left: 12px;
+            ion-back-button{
+                font-size: 13px;
+            }
+        }
+    }
+    
+}
+
+
+

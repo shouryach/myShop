@@ -1,0 +1,24 @@
+@media only screen and (max-width:500px){
+    .wishlist{
+        .header{
+            .right_icon_details{
+                li{
+                    img{ height: 21px;}
+                }
+            }
+        }
+        &.account{
+            .header{
+                ion-toolbar{
+                    ion-title{
+                        font-size: 13px; margin-top: 0; color: #000;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+

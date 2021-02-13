@@ -1,0 +1,59 @@
+.offer_notification{
+    width: 100%; background-color: #0b56da; text-align: center; color: #fff; font-size: 22px; padding: 15px 0; box-shadow: inset rgba(0,0,0,.29) 10px 0 18px; text-transform: uppercase;
+}
+.filter_back{
+    width: 100%; padding: 3px 6px;
+    ul{
+        &.details{
+            width: 100%; margin: 0; padding: 18px 0; border: #ddd 1px solid; border-radius: 100px; text-align: center; position: relative;
+            &:after{
+                width: 1px; height: 40px; background-color: #ddd; position: absolute; top: 0; bottom: 0; margin: auto; left: 0; right: 0; margin: auto; content: "";
+            }
+            li{
+                margin: 0 130px 0 0; padding: 0 0 0 48px; display: inline-block; list-style: none; font-size: 22px; color: #575757; text-transform: uppercase; position: relative;
+                img{ position: absolute; top: 0; bottom: 0; margin: auto; left: 0;}
+                &:last-child{ margin: 0 0 0 130px;}
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .offer_notification{
+        font-size: 12px; padding: 7px 0;
+    }
+    .filter_back{
+        ul{
+            
+            &.details{
+                padding: 8px 0;
+                &:after{height: 22px;} 
+                li{
+                    padding: 0 0 0 38px; font-size: 13px;  margin: 0 65px 0 0;
+                    &:last-child{ margin: 0 0 0 65px;}
+
+                    img{ height: 13px; }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .offer_notification{
+        font-size: 12px;
+    }
+    .filter_back{
+        padding: 4px 3px;
+        ul{
+            &.details{
+                li{
+                    padding: 0 0 0 38px; font-size: 13px;  margin: 0 0 0 0;
+                    &:last-child{ margin: 0 0 0 65px;}
+
+                    img{ height: 13px; }
+                }
+            }
+        }
+    }
+}

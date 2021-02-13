@@ -1,0 +1,23 @@
+.account{
+    &.address{
+        .right_icon_details{
+            li{
+                color: #000000;
+            }
+        }
+    }
+}
+ion-header.account.address .header{
+    background-color: #f2f6ff !important;
+}
+@media only screen and (max-width:500px){
+    .account{
+        &.address{
+            .right_icon_details{
+                li{
+                    font-size: 12px;
+                }
+            }
+        }
+    }  
+}

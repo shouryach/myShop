@@ -1,0 +1,57 @@
+<div class="queries_day">
+  <div class="text">Queries from <span>Last 30 Days</span></div>
+  <ion-button [routerLink]="['/change-month']" routerLinkActive="router-link-active" expand="block" fill="clear" shape="round">
+    CHANGE
+  </ion-button>
+</div>
+
+<ng-container *ngIf="noQueryy">
+  <div class="no_query_back">
+    <img src="assets/images/query.png" alt="">
+    <h2>No queries found</h2>
+    <h3>There were no queries raised in<br><span>Last 30 Days</span></h3>
+    <h4>Search queries from <span>Different Dates</span></h4>
+  </div>
+</ng-container>
+<ng-container *ngIf="mainQuery">
+  <div class="main_query_back">
+    <ion-list>
+      <ion-item lines="none" color="custom">
+        <ion-avatar slot="start">
+          <img src="assets/images/list.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Query Name ..................</h2>
+          <h3><span class="ticket">Open Ticket</span>   |   <span class="day"> Day, Date/Month</span></h3>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" color="custom">
+        <ion-avatar slot="start">
+          <img src="assets/images/list.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Query Name ..................</h2>
+          <h3><span class="ticket">Open Ticket</span>   |   <span class="day"> Day, Date/Month</span></h3>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" color="custom">
+        <ion-avatar slot="start">
+          <img src="assets/images/list.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Query Name ..................</h2>
+          <h3><span class="ticket">Open Ticket</span>   |   <span class="day"> Day, Date/Month</span></h3>
+        </ion-label>
+      </ion-item>
+      <ion-item lines="none" color="custom">
+        <ion-avatar slot="start">
+          <img src="assets/images/list.png">
+        </ion-avatar>
+        <ion-label>
+          <h2>Query Name ..................</h2>
+          <h3><span class="ticket">Open Ticket</span>   |   <span class="day"> Day, Date/Month</span></h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+</ng-container>

@@ -1,0 +1,116 @@
+<div class="top_back">
+  <div class="help_sta">help <img src="assets/images/lifesaver.png" alt=""></div>
+  <img src="assets/images/fav4.jpg" alt="">
+  <h4><span>Stylox</span><br>Men Blue Slim Fit Mid-Rise Clean Look Stretchable Jeans<br>Size: 30</h4>
+  <div class="delivered">
+    <img src="assets/images/delivered.png" alt="">
+    <span>Delivered</span><br>On Thu, 12 Sep
+  </div>
+</div>
+<div class="button_ex">Exchange/Return window available for 30 days</div>
+<ion-card class="address">
+  <ion-card-header>
+    <ion-card-title>Delivery Address</ion-card-title>
+    <ion-card-subtitle>navpreet singh <span>985988675</span></ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    #8730, st no 21, kot mangal singh, kot mangal singh, Ludhiana- 141003
+  </ion-card-content>
+</ion-card>
+<ion-card class="address item_price">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" size-sm="6">
+        <ion-card-header>
+          <ion-card-title>Total Item Price</ion-card-title>
+          <ion-card-subtitle>You saved <span class="color"><img src="assets/images/rupee2.png" alt=""> 580.00</span> on this item</ion-card-subtitle>
+        </ion-card-header>
+      </ion-col>
+      <ion-col size="4" size-sm="6" class="last">
+        <ion-card-header>
+          <ion-card-title><img src="assets/images/rupee.png" alt=""> 439.95</ion-card-title>
+          <ion-card-subtitle (click)="itemPriceModal()"><span class="color">View Breakup</span></ion-card-subtitle>
+        </ion-card-header>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>
+
+<div class="order_details">
+  <ion-card class="top">
+    <ion-card-header>
+      <ion-card-title>Other items in this order</ion-card-title>
+      <ion-card-subtitle>Order ID # 1123456 78898456542156</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <div>
+    <div class="details_back" [routerLink]="['/product-status']">
+      <ion-grid class="part">
+        <ion-row>
+          <ion-col size="3">
+            <div class="image_avator"><img src="assets/images/belt.jpg" alt=""></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="details">
+              <h3>LONDON FASHION hob</h3>
+              <h4>Men Black Solid Belt</h4>
+              <p>Size: Onesize</p>
+            </div>
+          </ion-col>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="details_back" [routerLink]="['/product-status']">
+      <ion-grid class="part">
+        <ion-row>
+          <ion-col size="3">
+            <div class="image_avator"><img src="assets/images/belt.jpg" alt=""></div>
+          </ion-col>
+          <ion-col size="9">
+            <div class="details">
+              <h3>SHELTR</h3>
+              <h4>Men Blue Slim Fit Mid-Rise Mildly D...</h4>
+              <p>Size: 30</p>
+            </div>
+          </ion-col>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <ion-card class="address item_price bottom">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="8" size-sm="6">
+          <ion-card-header>
+            <ion-card-title>Total Order Price</ion-card-title>
+            <ion-card-subtitle>You saved <span class="color"><img src="assets/images/rupee2.png" alt=""> 580.00</span> on this item</ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+        <ion-col size="4" size-sm="6" class="last">
+          <ion-card-header>
+            <ion-card-title><img src="assets/images/rupee.png" alt=""> 439.95</ion-card-title>
+            <ion-card-subtitle (click)="orderPriceModal()"><span class="color">View Breakup</span></ion-card-subtitle>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</div>
+
+<div class="bottom_details">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Updates sent to</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="del"><img src="assets/images/phone.png" alt=""> 9855988675</div>
+      <div class="del"><img src="assets/images/email.png" alt=""> navpreets81945@gmail.com</div>
+    </ion-card-content>
+  </ion-card>
+</div>
+
+
+
+

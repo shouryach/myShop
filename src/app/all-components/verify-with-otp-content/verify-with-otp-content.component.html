@@ -1,0 +1,45 @@
+<div class="verify_details">
+  <ion-buttons slot="start" class="back">
+    <ion-back-button defaultHref="/" text="BACK" icon="chevron-back-outline"></ion-back-button>
+  </ion-buttons>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Verify with OTP</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Sent to 9999999999
+    </ion-card-content>
+  </ion-card>
+  <form action="" class="form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+        <ion-col>
+          <ion-input type="text"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-card class="bottom_details">
+      <ion-card-content>
+        <p>Did not recieve OTP? <span [routerLink]="['/verify-otp']" routerLinkActive="router-link-active" > Resend OTP</span>  </p>
+        <p>Log in using<span [routerLink]="['/login']" routerLinkActive="router-link-active" > Password</span></p>
+        <p>Having trouble logging in?<span> Get help</span></p>
+      </ion-card-content>
+    </ion-card>
+    <div class="button_back">
+      <div class="details" [routerLink]="['/update-password']" routerLinkActive="router-link-active" >
+        <div class="icon_holder">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

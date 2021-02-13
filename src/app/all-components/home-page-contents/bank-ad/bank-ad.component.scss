@@ -1,0 +1,14 @@
+.cover{
+    padding: 0 18px;
+}
+.bank_ad{
+    width: 100%; height: auto; padding: 19px 0 17px; border-top: #e6e6e6 1px solid; border-bottom: #e6e6e6 1px solid; margin-bottom: 18px;
+}
+@media only screen and (max-width:500px){
+    .cover{
+        padding: 0 10px;
+    }
+    .bank_ad{
+        margin-bottom: 0;
+    }
+ }
