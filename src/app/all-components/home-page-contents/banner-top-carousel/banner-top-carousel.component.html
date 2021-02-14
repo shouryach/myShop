@@ -1,13 +1,13 @@
 <div class="carousel_top_slide">
   <ion-slides pager="false" [options]="slideOpts">
-    <ion-slide [routerLink]="['/categories']" routerLinkActive="router-link-active">
+    <ion-slide [routerLink]="['/categories']" routerLinkActive="router-link-active" *ngFor="let item of bannertopcarousellist">
       <div class="portion" >
-        <img src="assets/images/top_s1.jpg" alt="">
-        <div class="pro_title" style="background-color: rgba(252,118,95,.85);">NEW SEASON</div>
+        <img src="{{ item.image }}" alt="">
+        <div class="pro_title" style="background-color: rgba(252,118,95,.85);">{{ item.name }}</div>
       </div>
     </ion-slide>
 
-    <ion-slide [routerLink]="['/categories']" routerLinkActive="router-link-active">
+    <!-- <ion-slide [routerLink]="['/categories']" routerLinkActive="router-link-active">
       <div class="portion">
         <img src="assets/images/top_s2.jpg" alt="">
         <div class="pro_title" style="background-color: rgba(165,223,70,.85);">Sports wear</div>
@@ -67,7 +67,7 @@
         <img src="assets/images/top_s5.jpg" alt="">
         <div class="pro_title" style="background-color: rgba(49,48,50,.85);">blazer</div>
       </div>
-    </ion-slide>
+    </ion-slide> -->
 
     
     

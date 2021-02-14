@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BannertopcarouselService } from 'src/app/all-Services/bannertopcarousel.service';
 
 @Component({
   selector: 'app-banner-top-carousel',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerTopCarouselComponent implements OnInit {
 
-  constructor() { }
+  private bannertopcarousellist = []
+  constructor(private bannertopcarouselService: BannertopcarouselService) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -21,6 +23,11 @@ export class BannerTopCarouselComponent implements OnInit {
   };
   
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bannertopcarouselService.getBannerTopCarousel().subscribe((res : any[]) =>{
+      console.log(res);
+      this.bannertopcarousellist = res
+    })
+  }
 
 }

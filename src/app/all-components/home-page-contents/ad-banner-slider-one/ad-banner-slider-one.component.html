@@ -1,16 +1,8 @@
 <div class="banner_top_slide">
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion"><img src="assets/images/ad1.jpg" alt=""></div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion"><img src="assets/images/ad1.jpg" alt=""></div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion"><img src="assets/images/ad1.jpg" alt=""></div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion"><img src="assets/images/ad1.jpg" alt=""></div>
+  <ion-slides pager="true" [options]="slideOpts" >
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active" *ngFor="let item of bannerSlideOnePictureArray">
+      <div class="portion"><img src="{{ item.image }}" alt=""></div>
     </ion-slide>
   </ion-slides>
+    
 </div>

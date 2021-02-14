@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductsliderService } from 'src/app/all-Services/productslider.service';
 
 @Component({
   selector: 'app-product-slider',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductSliderComponent implements OnInit {
 
-  constructor() { }
+  private productSliderList = []
+
+  constructor(private productsliderService:ProductsliderService) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +23,13 @@ export class ProductSliderComponent implements OnInit {
     spaceBetween: 7,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.productsliderService.getNewOnShop().subscribe((res : any[]) =>{
+      console.log(res);
+      this.productSliderList = res;
+    })
+  }
+
+
 
 }

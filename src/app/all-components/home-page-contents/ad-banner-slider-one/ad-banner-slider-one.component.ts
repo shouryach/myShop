@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BannertopslideoneService } from 'src/app/all-Services/bannertopslideone.service';
 
 @Component({
   selector: 'app-ad-banner-slider-one',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdBannerSliderOneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private bannertopslideoneService : BannertopslideoneService ) { }
+
+  bannerSlideOnePictureArray = []
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +23,13 @@ export class AdBannerSliderOneComponent implements OnInit {
     spaceBetween: 0,    
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bannertopslideoneService.getBannerSlideOne().subscribe((res : any[]) =>
+      { console.log(res),
+        this.bannerSlideOnePictureArray = res}
+      
+      )
+
+  }
 
 }
