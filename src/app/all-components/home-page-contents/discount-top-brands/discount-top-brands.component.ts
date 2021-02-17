@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EpicdiscountService } from 'src/app/all-Services/epicdiscount.service';
 
 @Component({
   selector: 'app-discount-top-brands',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscountTopBrandsComponent implements OnInit {
 
-  constructor() { }
+  private epicDiscountList = []
+  constructor(private epicDiscountService:EpicdiscountService) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +22,11 @@ export class DiscountTopBrandsComponent implements OnInit {
     spaceBetween: 7,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.epicDiscountService.getEpicDiscount().subscribe((res:any[]) =>{
+      console.log(res)
+      this.epicDiscountList = res;
+    })
+  }
 
 }

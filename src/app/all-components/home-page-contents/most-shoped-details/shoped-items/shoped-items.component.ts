@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MostShopedDetailsComponent } from '../most-shoped-details.component';
+import { MostshoppedService } from 'src/app/all-Services/mostshopped.service';
 
 @Component({
   selector: 'app-shoped-items',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShopedItemsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mostShoppedService:MostshoppedService) { }
+
+  private mostShoppedList =[]
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +24,11 @@ export class ShopedItemsComponent implements OnInit {
     spaceBetween: 18,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.mostShoppedService.getMostShopped().subscribe((res : any[]) => {
+      console.log(res);
+      this.mostShoppedList = res;
+    })
+  }
 
 }

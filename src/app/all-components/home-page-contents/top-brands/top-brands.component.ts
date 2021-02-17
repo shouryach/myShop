@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TopbrandService } from 'src/app/all-Services/topbrand.service';
 
 @Component({
   selector: 'app-top-brands',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBrandsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private topBrandService:TopbrandService) { }
 
   ngOnInit() {}
+  
 
 }

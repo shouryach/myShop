@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LatestcheckoutService } from 'src/app/all-Services/latestcheckout.service';
 
 @Component({
   selector: 'app-latest-item',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LatestItemComponent implements OnInit {
 
-  constructor() { }
+  latestCheckoutList = []
+  constructor(private latestCheckoutService:LatestcheckoutService) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +22,11 @@ export class LatestItemComponent implements OnInit {
     spaceBetween: 18,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.latestCheckoutService.getLatestCheckout().subscribe((res:any[])=>{
+      console.log(res);
+      this.latestCheckoutList = res;
+    })
+  }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Topcategory2Service } from 'src/app/all-Services/topcategory2.service';
 
 @Component({
   selector: 'app-category-brand-product',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryBrandProductComponent implements OnInit {
 
-  constructor() { }
+  private topCategory2List =[]
+  constructor(private topCategory2Service:Topcategory2Service) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +22,11 @@ export class CategoryBrandProductComponent implements OnInit {
     spaceBetween: 7,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.topCategory2Service.getTopCategory2().subscribe((res:any[]) =>{
+      console.log(res);
+      this.topCategory2List = res;
+    })
+  }
 
 }

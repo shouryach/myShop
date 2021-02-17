@@ -3,13 +3,13 @@
 </div>
 <div class="product_slider">
   <ion-slides pager="false" [options]="slideOpts">
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active" *ngFor="let item of epicDiscountList">
       <div class="portion">
-        <img src="assets/images/h-p-s7.jpg" alt="">
+        <img src="{{ item.image }}" alt="">
         <ion-button fill="clear">Shop now</ion-button>
       </div>
     </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+    <!-- <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
       <div class="portion">
         <img src="assets/images/h-p-s8.jpg" alt="">
         <ion-button fill="clear">Shop now</ion-button>
@@ -20,7 +20,7 @@
         <img src="assets/images/h-p-s6.jpg" alt="">
         <ion-button fill="clear">Shop now</ion-button>
       </div>
-    </ion-slide>
+    </ion-slide> -->
     
   </ion-slides>
 </div>

@@ -2,17 +2,17 @@
   <ul class="details">
     <h2>formal wear</h2>
     <div>
-      <li>          
+      <li *ngFor="let item of topCategoryFormalListFirstTwo, let i=index">          
         <div class="portion">
-          <h3><span>Trousers</span></h3>  
-          <img src="assets/images/fav7.jpg" alt="">
+          <h3><span>{{ item.name }}</span></h3>  
+          <img src="{{ item.image}}" alt="">
         </div>
         <div class="portion">
-          <img src="assets/images/fav8.jpg" alt="">
-          <h3><span>T-Shirts</span></h3>  
+          <img src="{{ topCategoryFormalListLastTwo[i].image }}" alt="">
+          <h3><span>{{ topCategoryFormalListLastTwo[i].name }}</span></h3>  
         </div>
       </li>
-      <li>      
+      <!-- <li>      
         <div class="portion">
           <h3><span>Suits</span></h3>
           <img src="assets/images/fav9.jpg" alt="">
@@ -21,7 +21,7 @@
           <img src="assets/images/fav4.jpg" alt="">
           <h3><span>Blazers</span></h3>
         </div>
-      </li>
+      </li> -->
     </div>
     
   </ul>

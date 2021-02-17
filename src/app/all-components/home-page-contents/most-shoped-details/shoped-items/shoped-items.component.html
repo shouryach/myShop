@@ -1,12 +1,12 @@
 <div class="product_slider">
-  <ion-slides pager="false" [options]="slideOpts">
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+  <ion-slides pager="false" [options]="slideOpts" >
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active" *ngFor="let item of mostShoppedList">
       <div class="portion">
-        <img src="assets/images/h-p-s4.jpg" alt="">
+        <img src="{{ item.image }}" alt="">
         <ion-button expand="block" fill="clear" shape="round">Shop now >></ion-button>
       </div>
     </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+    <!-- <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
       <div class="portion">
         <img src="assets/images/h-p-s5.jpg" alt="">
         <ion-button expand="block" fill="clear" shape="round">Shop now >></ion-button>
@@ -17,7 +17,7 @@
         <img src="assets/images/h-p-s6.jpg" alt="">
         <ion-button expand="block" fill="clear" shape="round">Shop now >></ion-button>
       </div>
-    </ion-slide>
+    </ion-slide> -->
     
   </ion-slides>
 </div>

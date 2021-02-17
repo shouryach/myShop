@@ -1,5 +1,20 @@
 <div class="product_slider shoped">
   <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active" *ngFor="let item of latestCheckoutList">
+      <div class="portion">
+        <img src="{{ item.image }}" alt="">
+      </div>
+    </ion-slide>
+    <!-- <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+      <div class="portion">
+        <img src="assets/images/h-p-s5.jpg" alt="">
+      </div>
+    </ion-slide>
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+      <div class="portion">
+        <img src="assets/images/h-p-s6.jpg" alt="">
+      </div>
+    </ion-slide>
     <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
       <div class="portion">
         <img src="assets/images/h-p-s4.jpg" alt="">
@@ -14,22 +29,7 @@
       <div class="portion">
         <img src="assets/images/h-p-s6.jpg" alt="">
       </div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion">
-        <img src="assets/images/h-p-s4.jpg" alt="">
-      </div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion">
-        <img src="assets/images/h-p-s5.jpg" alt="">
-      </div>
-    </ion-slide>
-    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
-      <div class="portion">
-        <img src="assets/images/h-p-s6.jpg" alt="">
-      </div>
-    </ion-slide>
+    </ion-slide> -->
     
   </ion-slides>
 </div>

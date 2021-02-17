@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BestdealService } from 'src/app/all-Services/bestdeal.service';
 
 @Component({
   selector: 'app-best-deals',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestDealsComponent implements OnInit {
 
-  constructor() { }
+  bestDealsList = []
+
+  constructor(private bestDealsService:BestdealService) { }
 
   slideOpts = {
     initialSlide: 0,
@@ -20,6 +23,12 @@ export class BestDealsComponent implements OnInit {
     spaceBetween: 7,
   };
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.bestDealsService.getBestDeals().subscribe((res:any[]) =>{
+      console.log(res);
+      this.bestDealsList = res;
+
+    })
+  }
 
 }

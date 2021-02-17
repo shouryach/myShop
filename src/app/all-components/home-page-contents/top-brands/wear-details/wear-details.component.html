@@ -1,18 +1,18 @@
 <div class="main_details">
-  <ul class="details">
+  <ul class="details" >
     <h2>TOP Wear collection</h2>
     <div>
-      <li>          
+      <li *ngFor="let item of topBrandListFirstTwo, let i = index">          
         <div class="portion">
-          <h3><span>Hoodies</span></h3>  
-          <img src="assets/images/fav5.jpg" alt="">
+          <h3><span>{{ item.name }}</span></h3>  
+          <img src="{{ item.image }}" alt="">
         </div>
         <div class="portion">
-          <img src="assets/images/fav3.jpg" alt="">
-          <h3><span>Jackets</span></h3>  
+          <img src="{{ topBrandListLastTwo[i].image }}" alt="">
+          <h3><span>{{ topBrandListLastTwo[i].name }}</span></h3>  
         </div>
       </li>
-      <li>      
+      <!-- <li>      
         <div class="portion">
           <h3><span>Shirts</span></h3>
           <img src="assets/images/fav6.jpg" alt="">
@@ -21,7 +21,7 @@
           <img src="assets/images/fav1.jpg" alt="">
           <h3><span>T-shirts</span></h3>
         </div>
-      </li>
+      </li> -->
     </div>
     
   </ul>
