@@ -1,0 +1,94 @@
+<div class="payment_method_back">
+  <div class="portion">
+    <div class="payment_list_bar first">
+      OTHER
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="one()" [class.rotate]="rotateone">
+      I have an issue with the mobile app
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="oneContent" >
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="two()" [class.rotate]="rotatetwo">
+      I have a query on return / exchange process
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="twoContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="three()" [class.rotate]="rotatethree">
+      Will you refund the extra charges if the product is
+      returned ?
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="threeContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="four()" [class.rotate]="rotatefour">
+      I am unable to add more products in to the cart. Why ?
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="fourContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="five()" [class.rotate]="rotatefive">
+      I am unable to add more products in my wishlist. Why ?
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="fiveContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="six()" [class.rotate]="rotatesix">
+      My order is not confirmed / I have not got my orderID/
+My order status is not updated in My order/ What is
+happening to my order
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="sixContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" (click)="seven()" [class.rotate]="rotateseven">
+      Other
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="option_content" *ngIf="sevenContent">
+      <div class="pay_button_back">
+        <ion-button expand="block" fill="clear" shape="round">CHAT</ion-button>
+        <ion-button expand="block" fill="clear" shape="round">CALL</ion-button>
+      </div>
+    </div>
+  </div>
+</div>

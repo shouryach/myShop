@@ -1,0 +1,35 @@
+.carousel_top_slide{
+    width: 100%; display: block;  margin-bottom: 18px; padding: 0 18px;
+    .portion{ 
+        width: 100%; position: relative; border-radius: 30px; overflow: hidden; position: relative;
+        img{ width: 100%; height: auto; object-fit: cover; object-position: top center;  display: block;}
+        .pro_title{
+            position: absolute; bottom: 0; left: 0; width: 100%; color: #fff; text-align: center; padding: 10px 0; font-size: 13px; font-weight: 600; text-transform: uppercase;
+        }
+   }
+   
+}
+
+
+@media only screen and (max-width:500px){
+   .carousel_top_slide{
+       padding: 0 10px;
+       margin-bottom: 10px;
+       .portion{ 
+            border-radius: 10px;
+            .pro_title{
+                font-size: 8px;
+            }
+       }
+  }
+}
+
+@media only screen and (max-width:375px){
+    .carousel_top_slide{
+        .portion{ 
+             .pro_title{
+                 font-size: 6px; padding: 5px 0;
+             }
+        }
+   }
+ }

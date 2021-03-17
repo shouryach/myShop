@@ -1,0 +1,387 @@
+<ion-header no-shadow class="shop">
+  <header class="header">
+    <ion-toolbar color="custom" lines="no-lines" class="no-border">
+      <ion-buttons slot="start" [routerLink]="['/shop']" routerLinkActive="router-link-active">
+        <ion-icon name="close-outline" slot="first"></ion-icon>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ul class="right_icon_details">
+          <li (click)="searchModel()"><img src="assets/images/search.png" alt=""></li>
+          <li><img src="assets/images/heart.png" alt=""></li>
+          <li>
+            <img src="assets/images/bag.png" alt="">
+            <span>0</span>
+          </li>
+        </ul>
+      </ion-buttons>
+    </ion-toolbar>
+  </header>
+</ion-header>
+
+<div class="shop_details_content">
+  <div class="heron_section">
+    <ion-slides pager="true" #slides>
+      <ion-slide>
+        <img src="assets/images/pro_del.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/pro_del.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/pro_del.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/images/pro_del.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="product_basic_details">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>SINGLE Men Black & White Colour blocked Round Neck T-shirt</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="contentarea">
+          <div class="pricearea">
+            <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+            <span class="main_price"><img src="assets/images/rupee.png" alt="">899</span>
+            <span class="discount">50% OFF,Hurry*</span>
+            <span class="spec">Inclusive of all taxes</span>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="chart_quan">
+    <ion-card>
+      <ion-card-header>
+        <h3>Select Colour : Orange</h3>
+        <h4>Colour Chart</h4>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="choose_color">
+          <li (click)="next1(slides)"><span class="color"
+              style="background-color: #ea6e23; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>RED</b></li>
+          <li (click)="next2(slides)"><span class="color"
+              style="background-color: #a9c4e1; box-shadow: rgba(169, 196, 225, .4) 15px 0 20px;"></span><b>Yellow</b>
+          </li>
+          <li (click)="next3(slides)"><span class="color"
+              style="background-color: #3a9c3a; box-shadow: rgba(58, 156, 58, .4) 15px 0 20px;"></span><b>Green</b></li>
+          <li (click)="next4(slides)"><span class="color"
+              style="background-color: #3f8bd5; box-shadow: rgba(63, 139, 213, .4) 15px 0 20px;"></span><b>Cyan</b></li>
+        </ul>
+        <ul class="quantity_box">
+          <li>Quantity</li>
+          <li>
+            <div class="wrap">
+              <ion-icon name="chevron-down-outline" class="decrement" (click)="decrementQty()"></ion-icon>
+              <!--<ion-input type="number"></ion-input>-->
+              <div class="qty">{{qty}}</div>
+              <ion-icon name="chevron-up-outline" class="increment" (click)="incrementQty()"></ion-icon>
+            </div>
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="delivary_status">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title> Check Delivery & Services</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="input_back">
+          <ion-input type="text" placeholder="Enter Pincode"></ion-input>
+          <ion-button fill="clear" shape="round">CHECK</ion-button>
+        </div>
+        <ul class="details">
+          <li>
+            <img src="assets/images/car.png" alt="">
+            Free Delivery on order above Rs. 799
+          </li>
+          <li>
+            <img src="assets/images/free.png" alt="">
+            Cash on delivery available.
+          </li>
+          <li>
+            <img src="assets/images/reverse.png" alt="">
+            Easy 30 days returns and exchanges.
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div class="offer">
+    <ul class="details">
+      <li>
+        <img src="assets/images/offer.png" alt="">
+        Flat 300 Off + Free Shipping on first order
+      </li>
+      <li>
+        <img src="assets/images/car2.png" alt="">
+        Applicable on your first order. Use code: MYNTRA300
+      </li>
+    </ul>
+  </div>
+  <div class="featured">
+    <ul class="details">
+      <li>
+        <img src="assets/images/pro_dres.png" alt="">
+        <h3>Product Description</h3>
+        <p>This 2020 Emojis men’s half sleeve tshirt is an epitome of comfort and style. Pair this quirky black t-shirt
+          with ripped jeans and slip-on shoes for a cool boy look.</p>
+      </li>
+      <li>
+        <img src="assets/images/meter.png" alt="">
+        <h3>Regular Fit</h3>
+        <p>This 2020 Emojis men’s half sleeve tshirt is an</p>
+      </li>
+      <li>
+        <h3>Material & Care</h3>
+        <p>This 2020 Emojis men’s half sleeve tshirt is an epitome of comfort and style. Pair this quirky black t-shirt
+          with ripped jeans and slip-on shoes for a cool boy look.</p>
+      </li>
+    </ul>
+  </div>
+  <div class="emi_option">
+    <h3>EMI option available</h3>
+    <p>Purchase minimum 50 items for EMI</p>
+    <ion-button fill="clear" shape="round">view</ion-button>
+  </div>
+  <div class="pro_del">
+    <div class="part">
+      <h3>Product Details</h3>
+      <p>Black and White colourblocked T-shirt, has a round neck, and short sleeves</p>
+    </div>
+    <div class="part">
+      <h3>Material & Care</h3>
+      <p>Material: 100% Cotton Machine Wash</p>
+    </div>
+
+  </div>
+  <div class="customer_feed_back">
+    <div class="customer_said">
+      <h2>What Customers Said</h2>
+      <div class="port">
+        <h3>fit</h3>
+        <ul class="details">
+          <li>
+            <span>
+              <span style="width: 0%;"></span>
+            </span>
+            Too Tight (0%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 20%;"></span>
+            </span>
+            Somewhat Tight (20%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 100%;"></span>
+            </span>
+            As Expected (100%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 50%;"></span>
+            </span>
+            Somewhat Loose (50%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 70%;"></span>
+            </span>
+            Too Loose (70%)
+          </li>
+        </ul>
+      </div>
+      <div class="port">
+        <h3>Length</h3>
+        <ul class="details">
+          <li>
+            <span>
+              <span style="width: 15%;"></span>
+            </span>
+            Too Tight (15%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 35%;"></span>
+            </span>
+            Somewhat Tight (35%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 70%;"></span>
+            </span>
+            As Expected (70%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 100%;"></span>
+            </span>
+            Somewhat Loose (100%)
+          </li>
+          <li>
+            <span>
+              <span style="width: 40%;"></span>
+            </span>
+            Too Loose (40%)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="retailer_review">
+      <h3>Retailer Reviews (2)</h3>
+      <div class="port">
+        <p>Cloth is not of good quality. Fabric is very light
+          means kind of transparent types.</p>
+        <div class="comment_details">
+          <ul class="comment_person_date">
+            <li>Sumit Prajapati</li>
+            <li>28 july 2020</li>
+          </ul>
+          <ul class="like_dislike">
+            <li>
+              <img src="assets/images/like.png" alt="">
+              0
+            </li>
+            <li>
+              <img src="assets/images/dislike.png" alt="">
+              0
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="port">
+        <p>I am happy</p>
+        <div class="comment_details">
+          <ul class="comment_person_date">
+            <li>Krishna</li>
+            <li>29 June 2020</li>
+          </ul>
+          <ul class="like_dislike">
+            <li>
+              <img src="assets/images/like.png" alt="">
+              0
+            </li>
+            <li>
+              <img src="assets/images/dislike.png" alt="">
+              0
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="certificate_back">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="4">
+            <img src="assets/images/icon1.png" alt="">
+            <span>Genuine Products</span>
+          </ion-col>
+          <ion-col size="4">
+            <img src="assets/images/icon2.png" alt="">
+            <span>7 Step Quality Check</span>
+          </ion-col>
+          <ion-col size="4">
+            <img src="assets/images/icon3.png" alt="">
+            <span> Secure Payments</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div class="pro_del_button_back">
+    <ion-button class="wishlist" fill="clear" [routerLink]="['/wishlist']" routerLinkActive="router-link-active" >
+      <ion-icon slot="start" name="bookmark-outline"></ion-icon>
+      WISHLIST
+    </ion-button>
+    <ion-button class="cart" fill="clear" shape="round" [routerLink]="['/shopping-bag']" routerLinkActive="router-link-active" >
+      <ion-icon slot="start" name="bag-outline"></ion-icon>
+      ADD TO BAG
+    </ion-button>
+  </div>
+  <app-similar-products></app-similar-products>
+  <div class="portion nopadding">
+    <ion-item lines="none" color="custom" [routerLink]="['/shop']" routerLinkActive="router-link-active" >
+      <ion-label>More Products</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </div>
+  <app-retailer-liked></app-retailer-liked>
+  <div class="more_info">
+      <h3>More Information</h3>
+      <p>ProductCode: <strong>10982856</strong></p>
+      <p>Sold By: <span>Supercom Net<br />VIEW MORE</span> </p>
+      <div class="portion nopadding noborder">
+        <ion-item lines="none" color="custom" routerLinkActive="router-link-active" >
+          <ion-label>More about Online Shopping at BURKAT</ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+      </div>
+  </div>
+  <div class="keep_touch">
+    <h3>KEEP IN TOUCH</h3>
+    <ul class="social">
+      <li><img src="assets/images/social1.png" alt=""></li>
+      <li><img src="assets/images/social2.png" alt=""></li>
+      <li><img src="assets/images/social3.png" alt=""></li>
+      <li><img src="assets/images/social4.png" alt=""></li>
+    </ul>
+  </div>
+  <div class="footer_link">
+    <div class="port">
+      <h3>USEFUL LINKS</h3>
+      <ul>
+        <li>Contact Us</li>
+        <li>T&C</li>
+        <li>Terms Of Use</li>
+        <li>Track Orders</li>
+        <li>Shipping</li>
+        <li>Cancellation</li>
+        <li>Returns</li>  
+        <li>Privacy policy</li>
+      </ul>
+    </div>
+    <div class="port">
+      <h3>popular searches</h3>
+      <ul>
+          <li>Kurta Pajama</li>
+          <li>Leather Jackets</li>
+          <li>Sherwani</li>
+          <li>Shirts</li>
+          <li>T-Shirts</li>
+          <li>Denim shirts</li>
+          <li>Blazers</li>
+          <li>Kurta Pajama</li>
+          <li>Leather Jackets</li>
+          <li>Sherwani</li>
+          <li>Shirts</li>
+          <li>T-Shirts</li>
+          <li>Denim shirts</li>
+          <li>Blazers</li>
+          <li>Blazers</li>
+          <li>Kurta Pajama</li>
+          <li>Leather Jackets</li>
+          <li>Sherwani</li>
+          <li>Shirts</li>
+          <li>T-Shirts</li>
+          <li>Denim shirts</li>
+          <li>Blazers</li>
+          <li>Kurta Pajama</li>
+          <li>Leather Jackets</li>
+          <li>Sherwani</li>
+          <li>Shirts</li>
+          <li>T-Shirts</li>
+          <li>Denim shirts</li>
+          <li>Blazers</li>
+          <li>Blazers</li>
+          
+      </ul>
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,62 @@
+.payment_method_back{ 
+    width: 100%; height: auto; float: left; border-top: #f0eff4 13px solid;
+    .portion{
+        width: 100%; float: left; background-color: #fff;
+    }
+    .payment_list_bar{
+        width: 100%; position: relative; height: auto; float: left;  color: rgba(68,68,68,.8); font-size: 21px; border-top: #f0eff4 1px solid; padding: 26px 45px 26px 45px; font-weight: 500; text-transform: normal;
+        &.first{
+            font-weight: 700; color: rgba(0,0,0,.89); text-transform: uppercase;
+        }
+        &.rotate {
+            ion-icon{
+                transform: rotate(0deg);
+            }
+        }
+        ion-icon{
+            position: absolute; top: 0; bottom: 0; right: 20px; margin: auto; color: #7f7f7f; width: 30px; height: 30px;  transform: rotate(-90deg);
+        }
+    }
+    .option_content{
+        width: 100%; float: left; padding: 0 45px 26px 45px; 
+        .pay_button_back{
+            float: right;
+        }   
+        ion-button{
+            width: 151px; height: 56px; background-color: #0962ff; color: #fff; border-radius: 10px; font-size: 24px; font-weight: 500; box-shadow: rgba(9,98,255,.4) 10px 0 20px; margin: 0 17px 0 0; float: left;
+            &:last-child{ margin: 0;}      
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .payment_method_back{ 
+        .payment_list_bar{
+            font-size: 12px; padding: 19px 30px 19px 25px; 
+            ion-icon{ width: 16px; height: 16px;}
+        }
+        .option_content{
+            padding: 0 30px 19px 25px; 
+            ion-button{
+                width: 88px; height: 34px; font-size: 13px; margin: 0 10px 0 0; border-radius: 7px;
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width:359px){
+    .payment_method_back{ 
+        .payment_list_bar{
+            font-size: 9px; padding: 16px 30px 16px 25px; 
+            ion-icon{ width: 16px; height: 16px;}
+        }
+        .option_content{
+            ion-button{
+                width: 88px; height: 34px; font-size: 13px; margin: 0 10px 0 0; border-radius: 7px;
+            } 
+        }
+    }
+}
+
+
+

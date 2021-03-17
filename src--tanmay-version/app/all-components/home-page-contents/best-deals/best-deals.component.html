@@ -1,0 +1,26 @@
+<div class="designer_header">
+  <h3>catch the best deals</h3>
+</div>
+<div class="product_slider">
+  <ion-slides pager="false" [options]="slideOpts">
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active" *ngFor="let item of bestDealsList">
+      <div class="portion">
+        <img src="{{ item.image }}" alt="">
+        <ion-button fill="clear">Shop now</ion-button>
+      </div>
+    </ion-slide>
+    <!-- <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+      <div class="portion">
+        <img src="assets/images/h-p-s12.jpg" alt="">
+        <ion-button fill="clear">Shop now</ion-button>
+      </div>
+    </ion-slide>
+    <ion-slide [routerLink]="['/shop']" routerLinkActive="router-link-active">
+      <div class="portion">
+        <img src="assets/images/h-p-s6.jpg" alt="">
+        <ion-button fill="clear">Shop now</ion-button>
+      </div>
+    </ion-slide> -->
+    
+  </ion-slides>
+</div>

@@ -1,0 +1,20 @@
+<ion-header no-shadow class="account">
+  <header class="header dark_header">
+    <ion-toolbar color="custom" lines="no-lines" class="no-border">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="" icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons>
+      <ion-title text-left>
+        <span>Your Finance</span> 
+      </ion-title>
+    </ion-toolbar>
+  </header>
+  <ul class="orders_menu">
+    <li [routerLink]="['/your-finance/overview']" routerLinkActive="router-link-active" >Overview</li>
+    <li [routerLink]="['/your-finance/general-ledger']" routerLinkActive="router-link-active">General Ledger</li>
+  </ul>
+</ion-header>
+
+<ion-content>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-content>

@@ -1,0 +1,240 @@
+.finance_back{ 
+    width: 100%; float: left;
+    .top_filter{
+        width: 100%; float: left; margin: 0; padding: 15px 10px;  border-bottom: #f0f3f8 8px solid;
+        .text_box{
+            width: 100%; float: left; background-color: #f0f3f8; padding: 8px; border: #ddd 1px solid; border-radius: 5px; text-align: center;
+            label{
+                color: #6a6d72; font-size: 14px; text-transform: capitalize; font-weight: normal; margin-bottom: 10px; width: 100%; float: left;
+            }
+            input[type="date"]{
+                width: 100%; float: left; background: none; border: none; outline-style: none; text-align: center;
+            }
+        }
+        .button_back{
+            position: relative; bottom: 0; width: 100%; display: flex; align-items: center; height: 69px;
+            ion-button{
+                border-color: #0962ff; background-color: #0962ff; width: 88px; height: 50px; margin: 0; border-radius: 8px;
+            }
+        }
+    }
+}
+
+.table_details_back{
+    width: 100%; float: left;
+    table{
+        width: 100%; max-width: 100%; border-collapse: collapse;
+        thead{
+            width: 100%; background-color: #f0f3f8;
+            tr{
+                th{
+                    padding: 20px; text-align: left;  color: #818181; font-weight: normal;
+                }
+            }
+        }
+        tbody{
+            width: 100%;
+            tr{
+                td{
+                    padding: 20px; text-align: left; color: #646464;
+                    .billed{
+                        line-height: 28px;
+                        .blue{
+                            color: #0960fd;
+                        }
+                        strong{
+                            color: #000;
+                        }
+                    }
+                    .bill{
+                        color: #f45482; font-weight: 700;
+                        img{
+                            height: 12px;
+                        }
+                    }
+                    .rto{
+                        color: #57ba9e; font-weight: 700;
+                        img{
+                            height: 12px;
+                        }
+                    }
+                    .pdf{
+                        ion-icon{
+                            color: #0b5eff; width: 30px; height: 30px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    .head{
+        width: 100%; float: left; margin: 0; padding: 0;
+        li{
+            width: 25%; list-style: none; display: flex; align-items: center; float: left; padding: 20px; word-wrap: break-word; text-align: center;
+            &:first-child{ width: 55%;}
+            &:nth-child(2){ width: 15%;}
+            &:nth-child(3){ width: 15%;}
+            &:last-child{ width: 15%;}
+        }
+    }
+    .body{
+        width: 100%; float: left; margin: 0; padding: 0;
+        li{
+            width: 25%; list-style: none; display: flex; align-items: center; float: left; padding: 20px; word-wrap: break-word; text-align: left;
+            &:first-child{ width: 55%;}
+            &:nth-child(2){ width: 15%;}
+            &:nth-child(3){ width: 15%;}
+            &:last-child{ width: 15%;}
+            .billed{
+                line-height: 28px;
+                .blue{
+                    color: #0960fd;
+                }
+                strong{
+                    color: #000;
+                }
+            }
+            .bill{
+                color: #f45482; font-weight: 700;
+                img{
+                    height: 12px;
+                }
+            }
+            .rto{
+                color: #57ba9e; font-weight: 700;
+                img{
+                    height: 12px;
+                }
+            }
+            .pdf{
+                ion-icon{
+                    color: #0b5eff; width: 30px; height: 30px;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    .finance_back{ 
+        .top_filter{
+           
+            .text_box{
+                label{
+                    font-size: 8px;
+                }
+                input[type="date"]{
+                    font-size: 10px;
+                }
+            }
+            .button_back{
+                height: 54px; 
+                ion-button{
+                    font-size: 18px; height: 38px;
+                }
+            }
+        }
+        .table_details_back{
+            .head{
+                li{
+                    font-size: 12px; padding: 10px 20px 10px 20px;
+                    &:first-child{ width: 40%;}
+                    &:nth-child(2){ width: 20%;}
+                    &:nth-child(3){ width: 20%;}
+                    &:last-child{ width: 20%;}
+                }
+            }
+            .body{
+                li{
+                    font-size: 11px; padding: 10px 0 10px 20px; 
+                    &:first-child{ width: 40%;}
+                    &:nth-child(2){ width: 20%;}
+                    &:nth-child(3){ width: 20%;}
+                    &:last-child{ width: 20%;}
+                    .billed{
+                        line-height: 20px;
+                    }
+                    .bill{
+                        img{
+                            height: 9px;
+                        }
+                    }
+                    .rto{
+                        img{
+                            height: 9px;
+                        }
+                    }
+                    .pdf{
+                        ion-icon{
+                            color: #0b5eff; width: 20px; height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
+@media only screen and (max-width:359px){
+    .finance_back{ 
+        .top_filter{
+            padding: 0;
+            .text_box{
+                label{
+                    font-size: 8px; margin-bottom: 3px;
+                }
+                input[type="date"]{
+                    font-size: 9px;
+                }
+            }
+            .button_back{
+                height: 47px; 
+                ion-button{
+                    font-size: 14px;
+                }
+            }
+        }
+        .table_details_back{
+            .head{
+                li{
+                    font-size: 12px; padding: 10px 10px 10px 5px;
+                    &:first-child{ width: 40%;}
+                    &:nth-child(2){ width: 20%;}
+                    &:nth-child(3){ width: 20%;}
+                    &:last-child{ width: 20%;}
+                }
+            }
+            .body{
+                li{
+                    font-size: 8px; padding: 10px 0 10px 5px; 
+                    &:first-child{ width: 40%;}
+                    &:nth-child(2){ width: 20%;}
+                    &:nth-child(3){ width: 20%;}
+                    &:last-child{ width: 20%;}
+                    .billed{
+                        line-height: 20px;
+                    }
+                    .bill{
+                        img{
+                            height: 7px;
+                        }
+                    }
+                    .rto{
+                        img{
+                            height: 7px;
+                        }
+                    }
+                    .pdf{
+                        ion-icon{
+                            color: #0b5eff; width: 15px; height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}

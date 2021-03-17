@@ -1,0 +1,7 @@
+.category_top_slide{
+    padding-top: 14px; width: 100%; float: left; position: relative; 
+}
+
+.category_top_slide:after{
+    width: 90%; height: 1px; background-color: #ddd; position: absolute; bottom: 7px; left: 0; right: 0; margin: auto; content: "";
+}

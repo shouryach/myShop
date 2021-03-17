@@ -1,0 +1,31 @@
+<div class="main_details">
+  <ul class="details">
+    <h2>forever favourites</h2>
+    <div>
+      <li *ngFor="let item of topBrandListFirstTwo, let i=index">          
+        <div class="portion" >
+          <h3><span>{{ item.name }}</span></h3>  
+          <img src="{{ item.image }}" alt="">
+        </div>
+        <div class="portion">
+          <img src="{{ topBrandListLastTwo[i].image }}" alt="">
+          <h3><span>{{ topBrandListLastTwo[i].name }}</span></h3>  
+        </div>
+      </li>
+      <!-- <li *ngFor="let item of topBrandListLastTwo">      
+        <div class="portion">
+          <h3><span>Jackets</span></h3>
+          <img src="assets/images/fav3.jpg" alt="">
+        </div>
+        <div class="portion"  >
+          <img src="{{ item.image }}" alt="">
+          <h3><span>{{ item.name }}</span></h3>
+        </div>
+      </li> -->
+    </div>
+    
+  </ul>
+  <div class="button_back">
+    <ion-button expand="block" fill="clear" shape="round" [routerLink]="['/shop']" routerLinkActive="router-link-active">view all</ion-button>
+</div>
+</div>

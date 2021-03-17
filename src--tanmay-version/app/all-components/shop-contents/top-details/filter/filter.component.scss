@@ -1,0 +1,122 @@
+.filter_back{ 
+    width: 100%;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    height: 100%;
+    .filter_head{
+        width: 100%;
+        background-color: #f2f6ff;
+        border-radius: 0 0 50px 50px;
+        padding: 62px 20px 30px 20px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0 0 59px;
+        font-size: 30px;
+        font-style: normal;
+        color: #282727;
+        
+        text-transform: capitalize;
+        .cover{
+            position: relative; padding: 0 0 0 40px;
+        }
+        ion-icon{
+            position: absolute; top: 0; bottom: 0; margin: auto; 
+            &.back{
+                left: 0;
+            }
+            &.cross{
+                right: 0;
+            }
+        }
+    }
+    .tab_nav_back{
+        width: 40%; height: 100%; background: #e4ecff; float: left;
+        ul{
+            width: 100%; margin: 0; padding: 0 0 0 10px; float: left;
+            li{
+                width: 100%; margin: 0; padding: 20px 10px 20px 10px; float: left; list-style: none; text-transform: uppercase; border-left: #e4ecff 5px solid;
+                &.active{
+                    border-left: #0860ff 5px solid; background-color: #ffffff;
+                }
+                
+            }
+        } 
+    }
+    .tab_content_back{
+        width: 60%; height: 100%; padding: 25px; float: left; border-right: #e4ecff 20px solid;
+        ion-label{ text-align: center; font-size: 14px; color: #575757; width: 100%; float: left;}
+        ion-range{
+            padding-top: 0;
+        }
+        .min_max{
+            text-align: center; font-size: 16px;
+        }
+        .value_chnage{
+            width: 100%; float: left; margin: 0 0 12px 0; padding: 10px 0; list-style: none;  border: #d5d5d5 2px solid; border-radius: 10px; text-transform: capitalize; position: relative; color: #585858;
+            .min_max{
+                img{ height: 12px;} color: #1a1a1a;
+            } 
+        }
+        .category_back{
+            width: 100%; float: left;
+            .list{
+                margin: 0; padding: 0; float: left; width: 100%;
+                li{
+                    width: 100%; float: left; margin: 0 0 12px 0; padding: 0; list-style: none; height: 64px; line-height: 64px; padding: 0 20px; border: #d5d5d5 2px solid; border-radius: 10px; text-transform: capitalize; position: relative; color: #585858;
+                    .no{
+                        position: absolute; top: 0; bottom: 0; right: 29px; margin: auto;
+                    }
+                    &:hover{
+                        border-color: #0e62f8;
+                    }
+                    
+                }
+            }            
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .filter_back{ 
+        .filter_head{
+            font-size: 16px; padding: 44px 20px 20px 20px;
+            .cover{
+                padding: 0 0 0 22px;
+            }
+        }
+        .tab_nav_back{
+            width: 30%;
+            ul{
+                li{
+                    padding: 15px 5px; font-size: 10px;
+                }
+            }
+            
+        }
+        .tab_content_back{
+            width: 70%; padding: 20px;
+            .min_max{
+               font-size: 14px;
+            }
+            .value_chnage{
+                padding: 1px 0; font-size: 14px;
+            }
+            .category_back{
+                .list{
+                    li{
+                        height: 45px; line-height: 45px; font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:500px){
+    .filter_back{ 
+        .tab_content_back{
+            width: 70%; padding: 10px;
+            
+        }
+    }
+}

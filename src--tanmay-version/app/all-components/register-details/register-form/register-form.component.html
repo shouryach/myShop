@@ -1,0 +1,43 @@
+<div class="login_form_back">
+  <p>or</p>
+  <form [formGroup]="userForm" action="" class="form" (ngSubmit)="signUp()">
+    <div>
+      <div class="form_sec_details">
+        <div class="form_portion">
+          <div class="country_code">+91</div>
+          <ion-input type="number" id="phonenumber" placeholder="Mobile Number" for></ion-input>
+        </div>
+       
+      </div>
+      <div class="form_sec_details">
+        <label for="email">EMAIL</label>
+        <div class="form_portion">
+          <img src="assets/images/mail.png" alt="">
+          <ion-input type="text" id="email" placeholder="Email"></ion-input>
+        </div>
+      </div>
+      <div class="form_sec_details">
+        <label for="email">Username</label>
+        <div class="form_portion">
+          <img src="assets/images/mail.png" alt="">
+          <ion-input type="text" id="username" placeholder="Username"></ion-input>
+        </div>
+      </div>
+      <div class="form_sec_details">
+        <label for="email">Password</label>
+        <div class="form_portion">
+          <img src="assets/images/mail.png" alt="">
+          <ion-input type="password" id="password" placeholder="Password"></ion-input>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bottom_details">
+      <div class="button_back">
+        <!-- <ion-button type="submit" [disabled]="!userForm.valid"  expand="block" fill="clear" shape="round" [routerLink]="['/verify-otp-register']" routerLinkActive="router-link-active" >sign up</ion-button> -->
+        <ion-button type="submit" [disabled]="!userForm.valid"  expand="block" fill="clear" shape="round" [routerLink]="['/verify-otp-register']" routerLinkActive="router-link-active" >sign up</ion-button>
+      </div>
+      
+    </div>
+  </form>
+</div>

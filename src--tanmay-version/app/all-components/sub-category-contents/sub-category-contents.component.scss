@@ -1,0 +1,66 @@
+.cat_details{ 
+    padding-left: 18px; padding-right: 18px; padding-top: 18px; padding-bottom: 18px;
+    
+}
+.sub-cat{
+    position: relative;
+    &:after{
+        width: 0; 
+        height: 0; 
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;        
+        border-bottom: 14px solid #fff;
+        content: "";
+        position: absolute; bottom: 0; left: 0; right: 0; margin: auto;
+    }
+}
+ion-card{
+    width: 100%; height: auto; position: relative; margin: 0; box-shadow: none; margin-bottom: 18px; background-color: transparent; padding: 0;
+    img{ width: 100%; height: auto; display: block; border-radius: 20px;}
+    
+    ion-card-header{
+        padding: 0; box-shadow: none;
+    }
+    ion-card-title{
+        width: 100%; height: 100%; display: flex; align-items: center; padding: 0; padding-left: 45px; position: absolute; top: 0; left: 0; color: #3b3b3b; font-size: 35px; margin: 0;
+    }
+    
+}
+
+.details{
+    text-align: center;
+    img{ width: 90px; height: 90px; border-radius: 100%; display: inline-block; margin-bottom: 8px;}
+    .view-all{
+        width: 90px; height: 90px; border-radius: 100%; display: inline-block; background-color: #e0dcdc; cursor: pointer; position: relative; margin-bottom: 8px;
+        span{
+            width: 9px; height: 9px; border-radius: 10px; background-color: #0b56da; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; display: block;
+            &:before{
+                width: 9px; height: 9px; border-radius: 10px; background-color: #0b56da; position: absolute; top: 0; bottom: 0; left: -25px; right: 0; margin: auto; display: block; content: "";
+            }
+            &:after{
+                width: 9px; height: 9px; border-radius: 10px; background-color: #0b56da; position: absolute; top: 0; bottom: 0; left: 0; right: -25px; margin: auto; display: block; content: "";
+            }
+        }
+    }
+    h2{
+        font-size: 20px; color: #000000; margin: 0; padding: 0; font-weight: normal;
+    }
+    ion-col{
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width:500px){    
+    ion-card{
+        ion-card-title{
+            font-size: 18px;
+        }
+    }
+    .details{
+        h2{ font-size: 16px;}
+        ion-col{
+            margin-bottom: 15px;
+        }
+    }
+}

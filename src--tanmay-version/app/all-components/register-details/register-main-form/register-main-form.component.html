@@ -1,0 +1,69 @@
+<div class="register_main_form">
+  <ion-buttons slot="start" class="back">
+    <ion-back-button defaultHref="/" text="BACK" icon="chevron-back-outline"></ion-back-button>
+  </ion-buttons>
+  <div class="button_back_top">
+    <ion-button [routerLink]="['/home']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">skip >></ion-button>
+  </div>
+
+  <div class="main_form">
+    <h2>Complete your sign up</h2>
+    <form action="" class="form" [formGroup]="loginForm">
+      <div>
+        <div class="form_sec_details">
+          <div class="form_portion">
+            <img src="assets/images/r1.png" alt="">
+            <ion-input type="text" id="name" placeholder="Name"></ion-input>
+          </div>
+        </div>
+        <div class="form_sec_details">
+          <div class="form_portion email">
+            <img src="assets/images/r2.png" alt="">
+            <ion-input type="email" id="email" placeholder="Email"></ion-input>
+          </div>
+        </div>
+        <div class="form_sec_details">
+          <div class="form_portion password">
+            <img src="assets/images/r3.png" alt="">
+            <ion-input type="password" id="password" placeholder="Password"></ion-input>
+            <img src="assets/images/eye_button.png" class="eye" alt="" class="eye">
+          </div>
+        </div>
+        <div class="form_sec_details">
+          <div class="form_portion password">
+            <img src="assets/images/r3.png" alt="">
+            <ion-input type="password" id="confirm-password" placeholder="Password"></ion-input>
+            <img src="assets/images/eye_button.png" class="eye" alt="" class="eye">
+          </div>
+        </div>
+        <div class="form_sec_details">
+          <div class="form_portion">
+            <img src="assets/images/r4.png" alt="">
+            <ion-input type="text" id="cname" placeholder="Company Name"></ion-input>
+          </div>
+        </div>
+      </div>
+      <div class="radio_box_back">
+        <div class="port">
+          <input type="radio" checked class="radio" name="gender" id="male">
+          <label for="male">
+            <span></span>Male
+          </label>
+        </div>
+        <div class="port">
+          <input type="radio" class="radio" name="gender" id="female">
+          <label for="female">
+            <span></span>Female
+          </label>
+        </div>
+      </div>
+      <div class="bottom_details">
+        <div class="button_back">
+          <ion-button expand="block" fill="clear" [routerLink]="['/home']" routerLinkActive="router-link-active"  shape="round">sign up</ion-button>
+        </div>
+        
+      </div>
+    </form>
+  </div>
+
+</div>

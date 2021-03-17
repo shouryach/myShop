@@ -1,0 +1,31 @@
+.details{
+    ion-item{
+        padding: 15px 0; border-bottom: #ddd 1px solid;
+        img{
+            width: 85px; height: 85px;
+        }
+        ion-label{
+            font-size: 25px; color: #000; font-weight: 500; padding: 0 0 0 20px;
+            span{
+                font-weight: normal; font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .details{
+        ion-item{
+            padding: 13px 0;
+            img{
+                width: 49px; height: 49px;
+            }
+            ion-label{
+                font-size: 15px; padding: 0 0 0 16px;
+                span{
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

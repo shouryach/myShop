@@ -1,0 +1,26 @@
+<ion-header no-shadow>
+  <header class="header">
+    <ion-toolbar color="custom" lines="no-lines" class="no-border">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" text="BACK" icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons>      
+      <ion-title text-left>
+        <span>myshop</span> 
+      </ion-title>
+      <ion-buttons slot="end">
+        <ul class="right_icon_details">
+          <li><img src="assets/images/search.png" alt=""></li>
+          <li><img src="assets/images/heart.png" alt=""></li>
+          <li>
+            <img src="assets/images/bag.png" alt="">
+            <span>0</span>
+          </li>
+        </ul>
+      </ion-buttons>
+    </ion-toolbar>
+  </header>
+</ion-header>
+
+<ion-content>
+  <app-sub-category-contents></app-sub-category-contents>
+</ion-content>

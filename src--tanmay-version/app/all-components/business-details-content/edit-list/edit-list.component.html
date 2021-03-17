@@ -1,0 +1,47 @@
+<div class="edit_list_back">
+  <div class="portion">
+    <ion-label for="">Name</ion-label>    
+    <ion-item lines="none" color="custom">
+      <img src="assets/images/bei1.png" alt="">      
+      <ion-label>Your Business Name</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <div class="verify_back">
+      <h3>Verify your business</h3>
+      <p>Get your business verified to get the Verified Business badge and access to exclusive products and services</p>
+      <div class="button_back">
+        <ion-button fill="clear" shape="round">Verify Now</ion-button>
+      </div>
+    </div>
+  </div>
+  <div class="portion nopadding">
+    <ion-label for="">Media Gallery</ion-label>    
+    <ion-item lines="none" color="custom" [routerLink]="['/user-account']" routerLinkActive="router-link-active" >
+      <ion-label>New! Add photos/video to profile</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </div>
+  <div class="portion">
+    <ion-label for="">Establishment Year</ion-label>    
+    <ion-item lines="none" color="custom" [routerLink]="['/user-account']" routerLinkActive="router-link-active" >
+      <img src="assets/images/bei2.png" alt="">      
+      <ion-label>Select Year...</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    
+  </div>
+  <div class="portion nopadding">
+    <ion-label for="">Business Type</ion-label>    
+    <ion-item lines="none" color="custom" [routerLink]="['/user-account']" routerLinkActive="router-link-active" >
+      <ion-label>Select Business Type...</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </div>
+  <div class="portion nopadding">
+    <ion-label for="">Description</ion-label>    
+    <ion-item lines="none" color="custom" [routerLink]="['/user-account']" routerLinkActive="router-link-active" >
+      <ion-label>Add Your Drescription...</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+  </div>
+</div>

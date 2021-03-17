@@ -1,0 +1,91 @@
+.finance_back{ 
+    width: 100%; float: left;
+    .top_filter{
+        width: 100%; float: left; margin: 0; padding: 15px 10px;  border-bottom: #f0f3f8 8px solid;
+        .text_box{
+            width: 100%; float: left; background-color: #f0f3f8; padding: 8px; border: #ddd 1px solid; border-radius: 5px; text-align: center;
+            label{
+                color: #6a6d72; font-size: 14px; text-transform: capitalize; font-weight: normal; margin-bottom: 10px; width: 100%; float: left;
+            }
+            input[type="date"]{
+                width: 100%; float: left; background: none; border: none; outline-style: none; text-align: center;
+            }
+        }
+        .button_back{
+            position: relative; bottom: 0; width: 100%; display: flex; align-items: center; height: 69px;
+            ion-button{
+                border-color: #0962ff; background-color: #0962ff; width: 88px; height: 50px; margin: 0; border-radius: 8px;
+            }
+        }
+    }
+}
+
+.order_table.shop{
+    width: 100%; float: left;
+    ul{ width: 100%; margin: 0; padding: 0; float: left;}
+    li{
+        float: left; list-style: none; width: 100%; border-bottom: #cfcfcf 1px solid; padding: 15px; font-size: 26px;
+    }
+    .del{
+        color: #00a585;  font-weight: normal; float: left; width: 50%;
+        &:last-child{ text-align: right;}
+        &.red{
+            color: #fc5589;
+        }
+    }   
+    
+}
+
+@media only screen and (max-width:500px){
+    .finance_back{ 
+        .top_filter{
+           
+            .text_box{
+                label{
+                    font-size: 8px;
+                }
+                input[type="date"]{
+                    font-size: 10px;
+                }
+            }
+            .button_back{
+                height: 54px; 
+                ion-button{
+                    font-size: 18px; height: 38px;
+                }
+            }
+        }
+    }
+    .order_table.shop{
+        li{
+            font-size: 12px;
+        }
+    }
+}
+
+@media only screen and (max-width:359px){
+    .finance_back{ 
+        .top_filter{
+            padding: 0;
+            .text_box{
+                label{
+                    font-size: 8px; margin-bottom: 3px;
+                }
+                input[type="date"]{
+                    font-size: 9px;
+                }
+            }
+            .button_back{
+                height: 47px; 
+                ion-button{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .order_table.shop{
+        li{
+            font-size: 12px; padding: 10px 5px;
+        }
+    }
+}

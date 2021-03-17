@@ -44,6 +44,10 @@ const routes: Routes = [
     loadChildren: () => import('./all-pages/register/register.module').then( m => m.RegisterPageModule)
   },
   {
+    path: 'shop/:pid',
+    loadChildren: () => import('./all-pages/shop/shop.module').then( m => m.ShopPageModule)
+  },
+  {
     path: 'shop',
     loadChildren: () => import('./all-pages/shop/shop.module').then( m => m.ShopPageModule)
   },
@@ -53,6 +57,10 @@ const routes: Routes = [
   },
   {
     path: 'categories',
+    loadChildren: () => import('./all-pages/categories/categories.module').then( m => m.CategoriesPageModule)
+  },
+  {
+    path: 'categories/:id',
     loadChildren: () => import('./all-pages/categories/categories.module').then( m => m.CategoriesPageModule)
   },
   {
@@ -97,6 +105,10 @@ const routes: Routes = [
   },
   {
     path: 'shop-details',
+    loadChildren: () => import('./all-pages/shop-details/shop-details.module').then( m => m.ShopDetailsPageModule)
+  },
+  {
+    path: 'shop-details/:pid',
     loadChildren: () => import('./all-pages/shop-details/shop-details.module').then( m => m.ShopDetailsPageModule)
   },
   {

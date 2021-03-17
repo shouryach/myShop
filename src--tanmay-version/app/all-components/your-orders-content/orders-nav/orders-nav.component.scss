@@ -1,0 +1,13 @@
+.orders_menu{ 
+    width: 100%; height: auto; border-bottom: #ced3dc 1px solid; position: relative; float: left; margin: 0; padding: 0;
+    li{
+        padding: 35px 20px; color: #818181; font-weight: normal; font-size: 26px; text-transform: capitalize; float: left; list-style: none; position: relative;
+        &.router-link-active{
+            color: #0962ff; font-weight: 700;
+            &:after{
+                width: 100%; opacity: 1;
+            }
+        }
+        &:after{ width: 0%; height: 2px; position: absolute; bottom: 0; left: 0; right: 0; background-color: #0962ff; content: ""; opacity: 0;}
+    }
+}

@@ -15,11 +15,13 @@ import { MenuSocialComponent } from './all-components/header/menu-social/menu-so
 import { ProfileContentComponent } from './all-components/header/profile-content/profile-content.component';
 import { MainMenuComponent } from './all-components/header/main-menu/main-menu.component';
 import {HttpClientModule} from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent, HeaderComponent, MenuComponent, MenuSocialComponent, ProfileContentComponent, MainMenuComponent],
   entryComponents: [],
-  imports: [AppRoutingModule, BrowserModule,HttpClientModule, IonicModule.forRoot()],
+  imports: [AppRoutingModule, BrowserModule,HttpClientModule, IonicModule.forRoot(),IonicStorageModule.forRoot()
+  ],
   providers: [
     StatusBar,
     SplashScreen,

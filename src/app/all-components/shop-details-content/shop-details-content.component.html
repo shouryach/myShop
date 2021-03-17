@@ -21,30 +21,23 @@
 <div class="shop_details_content">
   <div class="heron_section">
     <ion-slides pager="true" #slides>
-      <ion-slide>
-        <img src="assets/images/pro_del.jpg" alt="">
+      <ion-slide *ngFor="let item of galleryImages">
+        <img src="{{item.src}}" alt="">
       </ion-slide>
-      <ion-slide>
-        <img src="assets/images/pro_del.jpg" alt="">
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/images/pro_del.jpg" alt="">
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/images/pro_del.jpg" alt="">
-      </ion-slide>
+      
     </ion-slides>
   </div>
   <div class="product_basic_details">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>SINGLE Men Black & White Colour blocked Round Neck T-shirt</ion-card-title>
+        <ion-card-title>{{name}}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <div class="contentarea">
           <div class="pricearea">
-            <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
-            <span class="main_price"><img src="assets/images/rupee.png" alt="">899</span>
+            <div [innerHTML]="price_html"></div>
+            <!-- <span class="offer_price"><img src="assets/images/rupee.png" alt="">449</span>
+            <span class="main_price"><img src="assets/images/rupee.png" alt="">899</span> -->
             <span class="discount">50% OFF,Hurry*</span>
             <span class="spec">Inclusive of all taxes</span>
           </div>
@@ -60,27 +53,40 @@
       </ion-card-header>
       <ion-card-content>
         <ul class="choose_color">
-          <li (click)="next1(slides)"><span class="color"
-              style="background-color: #ea6e23; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>RED</b></li>
-          <li (click)="next2(slides)"><span class="color"
-              style="background-color: #a9c4e1; box-shadow: rgba(169, 196, 225, .4) 15px 0 20px;"></span><b>Yellow</b>
-          </li>
-          <li (click)="next3(slides)"><span class="color"
-              style="background-color: #3a9c3a; box-shadow: rgba(58, 156, 58, .4) 15px 0 20px;"></span><b>Green</b></li>
-          <li (click)="next4(slides)"><span class="color"
-              style="background-color: #3f8bd5; box-shadow: rgba(63, 139, 213, .4) 15px 0 20px;"></span><b>Cyan</b></li>
+          <li (click)="setColor(item)" *ngFor="let item of color; let i = index"><span class="color"
+              style="background-color:{{item}}; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>{{item}}</b>
+              <div class="wrap">
+                <ion-icon name="chevron-down-outline" class="decrement" (click)="decrementQty(i)" style="margin-left: 69px;"></ion-icon>
+                <!--<ion-input type="number"></ion-input>-->
+                <div class="qty" #myDivElementRef>
+                  <input type="number" class="qty_num_tal{{i}}" value="1" #inputbox>
+                </div>
+                <ion-icon name="chevron-up-outline" class="increment" (click)="incrementQty(i)"></ion-icon>
+                <button (click)="addToCart(i,item)">Add to cart</button>
+              </div>
+            
+            </li>
+          
         </ul>
-        <ul class="quantity_box">
+        <!-- <h3>Select Size</h3>
+        <ul class="choose_size">
+          <li (click)="setSize(item)" *ngFor="let item of size"><span class="color"
+              style="background-color:{{item}}; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>{{item}}</b></li>
+          
+        </ul> -->
+
+
+        <!-- <ul class="quantity_box">
           <li>Quantity</li>
           <li>
             <div class="wrap">
               <ion-icon name="chevron-down-outline" class="decrement" (click)="decrementQty()"></ion-icon>
-              <!--<ion-input type="number"></ion-input>-->
+              
               <div class="qty">{{qty}}</div>
               <ion-icon name="chevron-up-outline" class="increment" (click)="incrementQty()"></ion-icon>
             </div>
           </li>
-        </ul>
+        </ul> -->
       </ion-card-content>
     </ion-card>
   </div>
@@ -128,8 +134,7 @@
       <li>
         <img src="assets/images/pro_dres.png" alt="">
         <h3>Product Description</h3>
-        <p>This 2020 Emojis men’s half sleeve tshirt is an epitome of comfort and style. Pair this quirky black t-shirt
-          with ripped jeans and slip-on shoes for a cool boy look.</p>
+        <p [innerHtml] = "description"></p>
       </li>
       <li>
         <img src="assets/images/meter.png" alt="">
@@ -137,21 +142,22 @@
         <p>This 2020 Emojis men’s half sleeve tshirt is an</p>
       </li>
       <li>
+        <img src="assets/images/meter.png" alt="">
         <h3>Material & Care</h3>
         <p>This 2020 Emojis men’s half sleeve tshirt is an epitome of comfort and style. Pair this quirky black t-shirt
           with ripped jeans and slip-on shoes for a cool boy look.</p>
       </li>
     </ul>
   </div>
-  <div class="emi_option">
+  <!-- <div class="emi_option">
     <h3>EMI option available</h3>
     <p>Purchase minimum 50 items for EMI</p>
     <ion-button fill="clear" shape="round">view</ion-button>
-  </div>
+  </div> -->
   <div class="pro_del">
     <div class="part">
       <h3>Product Details</h3>
-      <p>Black and White colourblocked T-shirt, has a round neck, and short sleeves</p>
+      <p [innerHtml]="short_description"></p>
     </div>
     <div class="part">
       <h3>Material & Care</h3>
@@ -159,7 +165,7 @@
     </div>
 
   </div>
-  <div class="customer_feed_back">
+  <!-- <div class="customer_feed_back">
     <div class="customer_said">
       <h2>What Customers Said</h2>
       <div class="port">
@@ -293,7 +299,7 @@
         </ion-row>
       </ion-grid>
     </div>
-  </div>
+  </div> -->
   <div class="pro_del_button_back">
     <ion-button class="wishlist" fill="clear" [routerLink]="['/wishlist']" routerLinkActive="router-link-active" >
       <ion-icon slot="start" name="bookmark-outline"></ion-icon>

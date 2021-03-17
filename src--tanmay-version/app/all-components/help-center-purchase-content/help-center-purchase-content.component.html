@@ -1,0 +1,65 @@
+<div class="help_top_back">
+  <h2>Help Center</h2>
+  <h3>Please get in touch and we<br>will be happy to help you</h3>
+  <img src="assets/images/help-query.png" alt="">
+</div>
+<div class="purchase_option">
+  <div class="bar">Need HELP with recent purchases?</div>
+  <div class="details_back" [routerLink]="['/product-status']">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <div class="image_avator"><img src="assets/images/pro-av.png" alt=""></div>
+        </ion-col>
+        <ion-col size="9">
+          <div class="details">
+            <h3>LIONBONE</h3>
+            <h4>LIONBONE Unisex Orange & GreyColourblocke...</h4>
+            <p><img src="assets/images/rupee.png" alt=""> 593</p>
+            <div class="right">
+              <h5><span>CANCELLED</span><br>Jul 18,2020</h5>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+
+<div class="payment_method_back">
+  <div class="portion">
+    <div class="payment_list_bar first">
+      More Queries Related to your experience
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" [routerLink]="['/payment-method']">
+      Payment/Refund
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" [routerLink]="['/manage-account']">
+      Manage Your Account
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    
+  </div>
+  <div class="portion">
+    <div class="payment_list_bar" [routerLink]="['/other-account']">
+      Other
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    
+  </div>
+ 
+</div>
+
+<div class="bottom_details">
+  <h2>Recent Queries</h2>
+    <h3>There are no recent queries raised in Last<br>30 Days.</h3>
+</div>
+
+<div class="language_button">
+  <ion-button expand="block" fill="clear" [routerLink]="['/help-center']">Show Older Queries</ion-button>
+</div>

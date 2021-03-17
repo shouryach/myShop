@@ -1,0 +1,155 @@
+<div class="filter_back">
+  <div class="filter_head">
+    <div class="cover" (click)="dismiss()">
+      <ion-icon name="chevron-back-outline" class="back"></ion-icon>
+      filter by
+      <ion-icon name="close-outline" class="cross"></ion-icon>
+    </div>
+  </div>
+  <div class="tab_nav_back">
+    <ul>
+      <li (click)="price()" [class.active]="active1">price</li>
+      <li (click)="mcq()" [class.active]="active2">mcq</li>
+      <li (click)="fabric()" [class.active]="active3">fabric</li>
+      <li (click)="clothing()" [class.active]="active4">clothing</li>
+      <li (click)="sleeve()" [class.active]="active5">sleeve</li>
+    </ul>
+  </div>
+  <div class="tab_content_back">
+    <div class="details" *ngIf="price_content" >
+      <div class="min_max">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              Min.
+            </ion-col>
+            <ion-col size="2"></ion-col>
+            <ion-col size="5">
+              Max.
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </div>
+      <div class="value_chnage">
+        <div class="min_max">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <img src="assets/images/rupee.png" alt="">
+                1
+              </ion-col>
+              <ion-col size="2">-</ion-col>
+              <ion-col size="5">
+                <img src="assets/images/rupee.png" alt="">
+                10,000
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+        </div>
+      </div>
+      <ion-range dualKnobs="true" min="1" max="10000" step="1" pin="true" [(ngModel)]="knobValues"></ion-range>
+      <ion-label>12345 Products found</ion-label>
+    </div>
+    <div class="details" *ngIf="mcq_content" >
+      <div class="min_max">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="5">
+              Min.
+            </ion-col>
+            <ion-col size="2"></ion-col>
+            <ion-col size="5">
+              Max.
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        
+      </div>
+      <div class="value_chnage">
+        <div class="min_max">
+          <ion-grid>
+            <ion-row>
+              <ion-col size="5">
+                <img src="assets/images/rupee.png" alt="">
+                1
+              </ion-col>
+              <ion-col size="2">-</ion-col>
+              <ion-col size="5">
+                <img src="assets/images/rupee.png" alt="">
+                5000
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          
+        </div>
+      </div>
+      <ion-range dualKnobs="true" min="1" max="5000" step="1" pin="true" [(ngModel)]="knobValues"></ion-range>
+      <ion-label>12345 Products found</ion-label>
+    </div>
+    <div class="details" *ngIf="fabric_content" >
+      <div class="category_back">
+        <ul class="list">
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+        </ul>
+    </div>
+    </div>
+    <div class="details" *ngIf="clothing_content" >
+      <div class="category_back">
+        <ul class="list">
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+        </ul>
+    </div>
+    </div>
+    <div class="details" *ngIf="sleeve_content" >
+      <div class="category_back">
+        <ul class="list">
+          <li>
+            Applique
+            <div class="no">20</div>
+          </li>
+          
+        </ul>
+    </div>
+    </div>
+  </div>
+</div>
