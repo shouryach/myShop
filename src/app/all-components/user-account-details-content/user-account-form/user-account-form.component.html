@@ -1,34 +1,46 @@
 <div class="main_form">
-  <form action="" class="form">
+  <form [formGroup]="updateForm" class="form" (ngSubmit)="saveData()">
+
     <div class="form_sec_details">
       <div class="form_portion">
         <img src="assets/images/uai1.png" alt="">
-        <ion-input type="text" id="name" placeholder="Name"></ion-input>
+        <ion-input type="text" id="name" placeholder="Name" [disabled]="notEditMode"
+          class="form-control" formControlName="name"></ion-input>
       </div>
     </div>
     <div class="form_sec_details">
       <div class="form_portion">
         <img src="assets/images/uai2.png" alt="">
-        <ion-input type="email" id="email" placeholder="Email"></ion-input>
+        <ion-input type="email" id="email" placeholder="Email" value="email" [disabled]="notEditMode"
+          class="form-control" formControlName="email"></ion-input>
       </div>
     </div>
     <div class="form_sec_details">
       <div class="form_portion">
         <img src="assets/images/uai3.png" alt="">
-        <ion-input type="text" id="mno" placeholder="Mobile Number"></ion-input>
+        <ion-input type="text" id="mno" placeholder="Mobile Number" value="mobile"
+          [disabled]="notEditMode" class="form-control" formControlName="mobile"></ion-input>
       </div>
     </div>
     <div class="form_sec_details">
       <div class="form_portion">
         <img src="assets/images/uai4.png" alt="">
-        <ion-input type="text" id="sname" placeholder="Business / Shop name"></ion-input>
+        <ion-input type="text" id="sname" placeholder="Business / Shop name" value="company"
+          [disabled]="notEditMode" class="form-control" formControlName="company"></ion-input>
       </div>
     </div>
     <div class="form_sec_details">
       <div class="form_portion">
         <img src="assets/images/uai5.png" alt="">
-        <ion-input type="text" id="pin" placeholder="Shop Pincode, ex: 960000"></ion-input>
+        <ion-input type="text" id="pin" placeholder="Shop Pincode, ex: 960000" value="pin"
+          [disabled]="notEditMode" class="form-control" formControlName="pin"></ion-input>
       </div>
+    </div>
+
+    <div>
+      <ion-button class="btn btn-success" (click)="onTogglenotEditMode()" [disabled]="!notEditMode">Edit form
+      </ion-button>
+      <ion-button type="submit">Save</ion-button>
     </div>
     <div class="account_security_details">
       <h3>Account Security</h3>
@@ -36,9 +48,8 @@
         <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
         <ion-label>Log me out from all devices</ion-label>
       </ion-item>
-      <p>Log out your Burkat account from al devices if you notice any suspicious activity</p> 
+      <p>Log out your Burkat account from al devices if you notice any suspicious activity</p>
       <ion-button expand="block" fill="clear" shape="round">Close My Account</ion-button>
-    </div>  
-     
+    </div>
   </form>
 </div>

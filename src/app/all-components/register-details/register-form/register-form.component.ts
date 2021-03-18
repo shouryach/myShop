@@ -9,6 +9,13 @@ export class RegisterFormComponent implements OnInit {
 
   constructor() { }
 
+  phoneNumber : string = ''
+
   ngOnInit() {}
+
+  sendOtp(){
+
+    console.log("In Register class "+this.phoneNumber);
+  }
 
 }

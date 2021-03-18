@@ -1,27 +1,27 @@
-<div class="login_form_back">
+<div class="login_form_back"  *ngIf="!(user | async);">
     <p>or Login with Email</p>
-    <form action="" class="form">
+    <form [formGroup]="loginForm" class="form" (ngSubmit)="login()">
       <div>
         <div class="form_sec_details">
           <label for="email">EMAIL</label>
           <div class="form_portion">
             <img src="assets/images/mail.png" alt="">
-            <ion-input type="text" id="email" placeholder="abc@gmail.com"></ion-input>
+            <ion-input type="text" id="email" placeholder="abc@gmail.com" class="form-control" formControlName="email"></ion-input>
           </div>
         </div>
         <div class="form_sec_details">
           <label for="email">PASSWORD</label>
           <div class="form_portion password">
             <img src="assets/images/lock.png" alt="">
-            <ion-input type="password" id="email" placeholder="PASSWORD"></ion-input>
+            <ion-input type="password" id="email" placeholder="PASSWORD" class="form-control" formControlName="password"></ion-input>
             <img src="assets/images/eye_button.png" class="eye" alt="" class="eye">
           </div>
         </div>
       </div>
-      <div class="forgot" [routerLink]="['/forgot-password']" routerLinkActive="router-link-active" >forgot?</div>
+      <div class="forgot" [routerLink]="['/forgot-password']" routerLinkActive="router-link-active" (click)="openPwReset()">forgot?</div>
       <div class="bottom_details">
         <div class="button_back">
-          <ion-button expand="block" [routerLink]="['/home']" routerLinkActive="router-link-active"  fill="clear" shape="round">sign in</ion-button>
+          <ion-button type="submit" expand="block" fill="clear" shape="round">sign in</ion-button>
         </div>
         <p>Don’t have an account? <span class="register" [routerLink]="['/auth-signup']" routerLinkActive="router-link-active" >Register</span></p>
       </div>
