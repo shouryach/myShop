@@ -66,7 +66,7 @@ export class UserAccountFormComponent implements OnInit {
 
   saveData() {
     console.log(this.updateForm.value.name + " " + this.updateForm.value.email + " " + this.updateForm.value.mobile + " " + this.updateForm.value.company + " " + this.updateForm.value.pin);
-    this.api.saveData(this.updateForm.value.name, this.updateForm.value.email, this.updateForm.value.mobile, this.updateForm.value.company, this.updateForm.value.pin)
+    this.api.saveData(this.updateForm.value.name, this.email, this.updateForm.value.mobile, this.updateForm.value.company, this.updateForm.value.pin)
 
   }
 

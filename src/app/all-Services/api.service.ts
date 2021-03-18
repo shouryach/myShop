@@ -65,6 +65,7 @@ export class ApiService {
 
   saveData(name, email, mobile, company, pin){
 
-    console.log("https://www.millionerbychoice.in/wp-json/myShop/v2/userdetails?name="+name+"&email="+email+"&mobile="+mobile+"&company="+company+"&pin="+pin);
+    return this.http.get("https://www.millionerbychoice.in/wp-json/myShop/v2/saveUserdetails?name="+name+"&email="+email+"&mobile="+mobile+"&company="+company+"&pin="+pin).subscribe((res) =>
+    console.log(res));
   }
 }
