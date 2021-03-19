@@ -1,11 +1,11 @@
-<div class="menu_header">
+<div class="menu_header" *ngIf="hide === false">
   <ion-menu-toggle>
     <div class="button_back">
       <ion-button [routerLink]="['/login']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">Login / Sign Up</ion-button>
     </div>
   </ion-menu-toggle>
 </div>  
-<div class="menu_header dark">
+<div class="menu_header dark" *ngIf="hide === true">
   <ion-menu-toggle>
   <ion-item lines="none" color="custom" class="ion-no-padding ion-activatable" [routerLink]="['/profile-setting']" routerLinkActive="router-link-active">
     <img src="assets/images/pro_avator.jpg" alt="">
