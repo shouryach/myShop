@@ -7,7 +7,7 @@
   </ion-slide>
 </ion-slides>
 
-<div class="button_back">
+<div class="button_back" *ngIf="hide === false">
     <ion-button [routerLink]="['/login']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">Login</ion-button>
     <ion-button [routerLink]="['/auth-signup']" routerLinkActive="router-link-active"  expand="block" fill="clear" shape="round">signup</ion-button>
 </div>

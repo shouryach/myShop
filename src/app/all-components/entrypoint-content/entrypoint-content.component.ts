@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashscreenService } from 'src/app/all-Services/flashscreen.service';
+import { ApiService } from 'src/app/all-Services/api.service';
 
 @Component({
   selector: 'app-entrypoint-content',
@@ -8,13 +9,15 @@ import { FlashscreenService } from 'src/app/all-Services/flashscreen.service';
 })
 export class EntrypointContentComponent implements OnInit {
 
-   flashScreens:any; 
+  flashScreens: any;
+  user: any;
+  hide = false;
 
-  constructor(private flash:FlashscreenService) { }
+  constructor(private api: ApiService, private flash: FlashscreenService) { }
 
   slideOpts = {
     initialSlide: 0,
-    autoplay:true,
+    autoplay: true,
     freeMode: false,
     speed: 400,
     slidesPerView: 1,
@@ -25,11 +28,26 @@ export class EntrypointContentComponent implements OnInit {
 
   ngOnInit() {
 
-    this.flash.getFlashScreen().subscribe(response=>{
+    this.flash.getFlashScreen().subscribe(response => {
       this.flashScreens = response;
     })
 
-    
+    this.user = this.api.getCurrentUser();
+    this.user.subscribe(user => {
+      if (user) {
+        console.log("User s this ")
+        console.log(user);
+        this.hide = true;
+      }
+      else {
+        console.log("empty user", user);
+        this.hide = false;
+      }
+
+
+
+    });
+
 
   }
 

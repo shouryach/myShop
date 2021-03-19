@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/all-Services/api.service';
 import { AlertController, ToastController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -17,7 +18,7 @@ export class LoginFormComponent implements OnInit {
   constructor(private api: ApiService,
     private fb: FormBuilder,
     private alertCtrl: AlertController,
-    private toastCtrl: ToastController) { 
+    private toastCtrl: ToastController, private router: Router) { 
       this.user.subscribe(user => {
         if (user) {
           console.log(user);
@@ -44,6 +45,8 @@ export class LoginFormComponent implements OnInit {
         this.showError(err);
       }
     );
+
+    this.router.navigate(['/home']);
   }
 
   async openPwReset() {

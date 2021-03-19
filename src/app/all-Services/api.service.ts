@@ -68,4 +68,10 @@ export class ApiService {
     return this.http.get("https://www.millionerbychoice.in/wp-json/myShop/v2/saveUserdetails?name="+name+"&email="+email+"&mobile="+mobile+"&company="+company+"&pin="+pin).subscribe((res) =>
     console.log(res));
   }
+
+  saveBusinessData(name, email, year, type, description){
+
+    return this.http.get("https://www.millionerbychoice.in/wp-json/myShop/v2/saveBusinessdetails?name="+name+"&email="+email+"&year="+year+"&type="+type+"&description="+description).subscribe((res) =>
+    console.log(res));
+  }
 }

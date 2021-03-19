@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ApiService } from 'src/app/all-Services/api.service';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-account-form',
@@ -15,7 +16,7 @@ export class UserAccountFormComponent implements OnInit {
   updateForm: FormGroup;
 
 
-  constructor(private api: ApiService, private httpClient: HttpClient, private fb: FormBuilder) {
+  constructor(private api: ApiService, private httpClient: HttpClient, private fb: FormBuilder, private router:Router) {
 
   }
 
@@ -67,7 +68,12 @@ export class UserAccountFormComponent implements OnInit {
   saveData() {
     console.log(this.updateForm.value.name + " " + this.updateForm.value.email + " " + this.updateForm.value.mobile + " " + this.updateForm.value.company + " " + this.updateForm.value.pin);
     this.api.saveData(this.updateForm.value.name, this.email, this.updateForm.value.mobile, this.updateForm.value.company, this.updateForm.value.pin)
+    this.onTogglenotEditMode();
+  }
 
+  logout() {
+    this.api.logout();
+    this.router.navigate(['/']);
   }
 
 }
