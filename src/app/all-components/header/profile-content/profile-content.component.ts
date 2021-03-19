@@ -14,6 +14,9 @@ export class ProfileContentComponent implements OnInit {
 
   user: any;
   hide = false;
+  email : String;
+  userDetail : any;
+  profilename : String;
 
   ngOnInit() {
 
@@ -23,6 +26,13 @@ export class ProfileContentComponent implements OnInit {
         console.log("User s this ")
         console.log(user);
         this.hide = true;
+
+        console.log(user.user_email);
+        this.email = user.user_email;
+        this.api.getUserByEmail(this.email).subscribe((res: any) => {
+          this.userDetail = res;
+          this.profilename = this.userDetail[0].display_name;
+        });
       }
       else {
         console.log("empty user", user);
