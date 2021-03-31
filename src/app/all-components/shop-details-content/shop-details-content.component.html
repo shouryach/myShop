@@ -54,18 +54,21 @@
       <ion-card-content>
         <ul class="choose_color">
           <li (click)="setColor(item)" *ngFor="let item of color; let i = index"><span class="color"
-              style="background-color:{{item}}; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>{{item}}</b>
-              <div class="wrap">
-                <ion-icon name="chevron-down-outline" class="decrement" (click)="decrementQty(i)" style="margin-left: 69px;"></ion-icon>
-                <!--<ion-input type="number"></ion-input>-->
-                <div class="qty" #myDivElementRef>
-                  <input type="number" class="qty_num_tal{{i}}" value="1" #inputbox>
-                </div>
-                <ion-icon name="chevron-up-outline" class="increment" (click)="incrementQty(i)"></ion-icon>
-                <button (click)="addToCart(i,item)">Add to cart</button>
-              </div>
+            style="background-color:{{item}}; box-shadow: rgba(273, 111, 34, .4) 15px 0 20px;"></span><b>{{item}}</b>
+            <div class="wrap">                
+              <!--<ion-input type="number"></ion-input>-->
+              <div class="no_box_wrap" #myDivElementRef>
+                <ion-icon name="chevron-down-outline" class="decrement" (click)="decrementQty(i)"></ion-icon>
+                <input type="number" class="qty_num_tal{{i}} qty" value="1" #inputbox>
+                <ion-icon name="chevron-up-outline" class="increment" (click)="incrementQty(i)"></ion-icon> 
+              </div>                               
+              <ion-button  fill="clear" (click)="addToCart(i,item)">
+                Add to cart
+              </ion-button>
+            </div>
+          
+          </li>
             
-            </li>
           
         </ul>
         <!-- <h3>Select Size</h3>
