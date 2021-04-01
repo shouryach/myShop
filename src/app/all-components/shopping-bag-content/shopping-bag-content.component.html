@@ -29,7 +29,7 @@
       <img src="assets/images/delivary_car.png" alt="">
       Yay! <strong>No handling fee</strong> on this order
     </div>
-    <div class="product_details" *ngFor="let item of items">
+    <div class="product_details" *ngFor="let item of items;let i = index">
       <ion-grid>
         <ion-row>
           <ion-col size="4">
@@ -50,12 +50,12 @@
         <ion-grid fixed>
           <ion-row>
             <ion-col size="5">
-              <ion-button expand="block" fill="clear" shape="round" color="custom" >
+              <ion-button expand="block" fill="clear" shape="round" color="custom" (click)="remove(item.product.id,item.variation,i)">
                 Remove
               </ion-button>
             </ion-col>
             <ion-col size="7">
-              <ion-button [routerLink]="['/wishlist']" expand="block" fill="clear" shape="round" color="custom">
+              <ion-button  expand="block" fill="clear" shape="round" color="custom" (click)="activeWish(item.product.id,item.variation,i)">
                 Move to wishlist
               </ion-button>
             </ion-col>
