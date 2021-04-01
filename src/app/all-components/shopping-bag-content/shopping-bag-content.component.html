@@ -1,5 +1,5 @@
 <div class="shopping_bag">
-    <div class="avail_offer">
+    <!-- <div class="avail_offer">
       <h2>
         <img src="assets/images/offer2.png" alt="">
         Available Offers
@@ -24,12 +24,12 @@
         <ion-icon name="chevron-down-outline"></ion-icon>
       </div>      
       
-    </div>
+    </div> -->
     <div class="handling_fee_bar">
       <img src="assets/images/delivary_car.png" alt="">
       Yay! <strong>No handling fee</strong> on this order
     </div>
-    <div class="product_details">
+    <div class="product_details" *ngFor="let item of items">
       <ion-grid>
         <ion-row>
           <ion-col size="4">
@@ -37,10 +37,10 @@
           </ion-col>
           <ion-col size="8">
             <div class="details">
-              <h3>Single</h3>
-              <h4>Men Navy Blue Colourblocked Sli..</h4>
-              <p>Sold By: Supercom Net</p>
-              <div class="tag">Pcs: 5</div>
+              <h3>{{item.product.name}}</h3>
+              <h4>color:{{item.color}}</h4>
+              
+              
               <div class="tag">Qty: 1</div>
             </div>
           </ion-col>
@@ -198,29 +198,29 @@
             <ul class="body">
               <li>
                 <div class="del">Bag Total :</div>
-                <div class="del">1,099</div>
+                <div class="del">{{price}}</div>
               </li>
-              <li>
+              <!-- <li>
                 <div class="del">Bag discount :</div>
                 <div class="del discount">-550</div>
-              </li>
+              </li> -->
               <li>
                 <div class="del" class="del">Coupon Discount :</div>
                 <div class="del coupon">Apply Coupon</div>
               </li>
               <li>
                 <div class="del">Order Total :</div>
-                <div class="del">549</div>
-              <li>
+                <div class="del">{{orderTotal}}</div>
+              <!-- <li>
                 <li>
                   <div class="del">Platform Handling Fee</div>
                   <div class="del free"><span>99</span> FREE</div>
-                </li>
+                </li> -->
             </ul>
             <ul class="foot">
               <li>
                 <div class="del"><strong>Total</strong></div>
-                <div class="del"><strong>549</strong></div>
+                <div class="del"><strong>{{total}}</strong></div>
               </li>
             </ul>
           </div>
@@ -234,7 +234,7 @@
     <ion-row>
       <ion-col size="5">
         <div class="price">
-          549<br><span>VIEW DETAILS</span>
+          {{total}}<br><span>VIEW DETAILS</span>
         </div>
         
       </ion-col>

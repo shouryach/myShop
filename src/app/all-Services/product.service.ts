@@ -14,6 +14,13 @@ export class ProductService {
     }&consumer_secret=${this.consumerSecret}`);
   }
 
+
+  public getVariationsDetails(pid,vid) {
+    return this.http.get(`${this.url}/wp-json/wc/v3/products/${pid}/variations/${vid}?lang=en&currency=USD&consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}`);
+  }
+
   public getShopDetails(pid) {
     return this.http.get(`${this.url}/wp-json/wc/v3/products/?category=${pid}&lang=en&currency=USD&consumer_key=${
       this.consumerKey
