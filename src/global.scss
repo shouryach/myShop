@@ -813,3 +813,8 @@ ion-header{
 .ion-color.sc-ion-searchbar-md-h .searchbar-input.sc-ion-searchbar-md{
     border-radius: 100px !important; background-color: #0b56da
 }
+
+
+ion-input.ng-invalid.ng-touched{
+    border: #db3022 1px solid !important;
+}

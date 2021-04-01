@@ -1,4 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+
+
+
+
+
+
 
 @Component({
   selector: 'app-add-new-address',
@@ -6,10 +13,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-new-address.page.scss'],
 })
 export class AddNewAddressPage implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
   }
+  
+  
+  
+  
+  
 
 }

@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { AddNewAddressPageRoutingModule } from './add-new-address-routing.module';
 
 import { AddNewAddressPage } from './add-new-address.page';
-import { AddNewAddressContentComponent } from '../../all-components/add-new-address-content/add-new-address-content.component';
+import { AddNewAddressContentComponent } from 'src/app/all-components/select-user-address-content/add-new-address-content/add-new-address-content.component';
 
 @NgModule({
   imports: [

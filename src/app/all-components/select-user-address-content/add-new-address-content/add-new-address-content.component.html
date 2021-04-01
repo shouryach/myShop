@@ -1,0 +1,64 @@
+<div class="add_new_address_back">
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <div class="portion">
+    <ion-label>contact details</ion-label>
+    <div class="cover">
+      <ion-input type="text" ngModel name="name" #name="ngModel" placeholder="Name*" required [(ngModel)]="namedata"></ion-input>
+      <span *ngIf="!name.valid && name.touched">Please Put Valid Name</span>
+      <ion-input type="tel" ngModel name="mobileno" #mobileno="ngModel" placeholder="Mobile No*" [(ngModel)]="mobiledata" required></ion-input>
+      <span *ngIf="!mobileno.valid && mobileno.touched">Please Put Valid Mobile No</span>
+    </div>
+  </div>
+  <div class="portion">
+    <ion-label>Address</ion-label>
+    <div class="cover">
+      <ion-input type="text" ngModel name="pincode" #pincode="ngModel" placeholder="Pin Code*" required [(ngModel)]="pindata"></ion-input>
+      <span *ngIf="!pincode.valid && pincode.touched">Please Put Valid PIN No</span>
+      <ion-input type="text" ngModel name="address" #address="ngModel" placeholder="Address (House No, Building, Street, Area)*" required [(ngModel)]="addressdata"></ion-input>
+      <span *ngIf="!address.valid && address.touched">Please Put Valid Address</span>
+      <ion-input type="text" ngModel name="town" #town="ngModel" placeholder="Locality / Town*" required [(ngModel)]="towndata"></ion-input>
+      <span *ngIf="!town.valid && town.touched">Please Put Valid Locality / Town</span>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-input name="city" #city="ngModel" type="text" ngModel placeholder="City / District*" required [(ngModel)]="districtdata"></ion-input>
+            <span *ngIf="!city.valid && city.touched">Please Put Valid City / District</span>
+          </ion-col>
+          
+          <ion-col size="6">
+            <ion-input name="state" #state="ngModel" type="text" ngModel placeholder="State*"  [(ngModel)]="statedata"></ion-input>
+            <span *ngIf="!state.valid && state.touched">Please Put Valid State</span>
+          </ion-col>
+          
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div class="portion">
+    <ion-label>Save Address as</ion-label>
+    <div class="cover">
+        <div class="port">
+          <input type="checkbox" ngModel id="home" name="home" [(ngModel)]="homedata">
+          <label for="home"><span>Home</span></label>
+        </div>
+        <div class="port">
+          <input type="checkbox" ngModel id="work" name="work" [(ngModel)]="workdata">
+          <label for="work"><span>Work</span></label>
+        </div>
+    </div>
+  </div>  
+  <div class="portion">
+    <div class="cover">
+        <div class="check_box">
+          <input type="checkbox" id="check">
+          <label for="check"><span></span>Make this my default address</label>
+        </div>
+    </div>
+  </div>
+  <div class="button_back_add">
+    <!--<ion-button expand="block" [disabled]="!myForm.valid" fill="clear" shape="round">save address</ion-button>-->
+    <input type="Submit" class="submit" [disabled]="!myForm.valid" value="save address" (click)="addpost(namedata, mobiledata, pindata, addressdata, towndata, districtdata, statedata, homedata, workdata)">
+  </div>
+  </form>
+  
+</div>
