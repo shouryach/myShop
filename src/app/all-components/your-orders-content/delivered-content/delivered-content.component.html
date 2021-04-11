@@ -1,17 +1,30 @@
-<div class="oders_details_back">
-  <div class="portion">
-    <div class="order_cover">
-      <div class="order_pending">
-        <img src="assets\images\orders_avator.jpg" alt="">
-        <h2>Highlander Black Slim Fit Casual Shirt</h2>
-        <div class="price"><span class="offer_price">Rs. 479 </span> <span class="main_price">Rs. 999</span> <span
-            class="off_price">(52% OFF)</span></div>
-        <div class="date">5 March 2020</div>
-        <div class="status">
-          <div class="status_highlight">delivered</div>
-          <div class="order_no">Order No.#78946</div>
+<div *ngIf="flag">
+  <div *ngFor="let item of data">
+    <div *ngIf="item.status == 'completed'">
+      <div *ngFor="let i of item.line_items">
+        <div class="oders_details_back">
+          <div class="portion">
+            <div class="order_cover">
+              <div class="order_pending">
+                <img src="assets\images\orders_avator.jpg" alt="">
+                <h2>{{ i.name }}</h2>
+                <div class="price"><span class="offer_price">Rs. 479 </span> <span class="main_price">Rs. 999</span> <span
+                    class="off_price">(52% OFF)</span></div>
+                <div class="date">5 March 2020</div>
+                <div class="status">
+                  <div class="status_highlight">{{ item.status }}</div>
+                  <div class="order_no">Order No.#78946</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</div>
+<div *ngIf="!flag">
+  <div class="oders_details_back">
+      <div class="no_order">No Orders to Show</div>
   </div>
 </div>

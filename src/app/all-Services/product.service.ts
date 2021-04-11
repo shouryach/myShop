@@ -27,5 +27,11 @@ export class ProductService {
     }&consumer_secret=${this.consumerSecret}`);
   }
 
+  public getOrderDetails(){
+    return this.http.get(`${this.url}/wp-json/wc/v3/orders/?consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}`);
+  } 
+
 
 }

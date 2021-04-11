@@ -1,68 +1,92 @@
 <div class="oders_details_back">
+
   <div class="portion">
-    <div class="order_cover">
-      <div class="order_pending">
-        <img src="assets/images/orders_avator.jpg" alt="">
-        <h2>Highlander Black Slim Fit Casual Shirt</h2>
-        <div class="price"><span class="offer_price">Rs. 479 </span> <span class="main_price">Rs. 999</span> <span
-            class="off_price">(52% OFF)</span></div>
-        <div class="date">5 March 2020</div>
-        <div class="status">
-          <div class="status_highlight">pending</div>
-          <div class="order_no">Order No.#78946</div>
-        </div>
-        <ion-icon name="chevron-forward-outline"></ion-icon>
-      </div>
-      <div class="status_timeline">
-        <div class="part">Confirmed</div>
-        <div class="part">Ready To Ship</div>
-        <div class="part">Shipped</div>
-        <div class="part">Out for Delivery</div>
-        <div class="part">Delivered</div>
-      </div>
-    </div>
-    <div class="address_bar" (click)="view_add()" [class.rotate]="rotate">View Address & Payment Details <ion-icon name="chevron-down-outline"></ion-icon>
-    </div>
-  </div>
-  <ng-container *ngIf="viewadd_pay">
-    <div class="portion shipped">
-      <div class="shipping_details">
-        <div class="order_cover">
-          <h3>Shipping Details</h3>
-          <div class="ship_del">
-            Navpreet Singh<br><span>9874,Ludhiana 141003,Punjab,India</span>
+    <div *ngIf="flag">
+      <div *ngFor="let item of data">
+        <div *ngIf="item.status == 'processing'">
+          <div *ngFor="let i of item.line_items">
+            <div class="order_cover">
+              <div class="order_pending">
+                <img src="assets/images/orders_avator.jpg" alt="">
+                <h2>{{ i.name }}</h2>
+                <div class="price"><span class="offer_price">{{ i.price }}</span> 
+                  <!-- <span class="main_price">Rs. 999</span>
+                  <span class="off_price">(52% OFF)</span> -->
+                </div>
+                <div class="date">{{ item.date_created}}</div>
+                <div class="status">
+                  <div class="status_highlight">{{ item.status }}</div>
+                  <div class="order_no">Order No.#{{ item.id }}</div>
+                </div>
+                <ion-icon name="chevron-forward-outline"></ion-icon>
+              </div>
+              <!-- <div class="status_timeline">
+              <div class="part">Confirmed</div>
+              <div class="part">Ready To Ship</div>
+              <div class="part">Shipped</div>
+              <div class="part">Out for Delivery</div>
+              <div class="part">Delivered</div>
+            </div>
+          </div> -->
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="portion shipped">
-      <div class="payment_details">
-        <h3>Payment Summary</h3>
-        <div class="order_table">
-          <ul class="body">
-            <li>
-              <div class="del"><strong>MRP :</strong></div>
-              <div class="del">599.00</div>
-            </li>
-            <li>
-              <div class="del"><strong>GST :</strong></div>
-              <div class="del">11.95</div>
-            </li>
-            <li>
-              <div class="del" class="del"><strong>Item Discount :</strong></div>
-              <div class="del">(-) 360.00</div>
-            </li>
-            <li>
-              <div class="del"><strong>Order Total :</strong></div>
-              <div class="del">250.95</div>
-            <li>
-          </ul>
-          <ul class="foot">
-            <li>
-              <div class="del"><strong>Amount Paid</strong></div>
-              <div class="del"><strong>299</strong></div>
-            </li>
-          </ul>
+    <div *ngIf="!flag">
+      <div class="oders_details_back">
+        <div class="no_order">No Orders to Show</div>
+      </div>
+    </div>
+    <div class="address_bar" (click)="view_add()" [class.rotate]="rotate">View Address & Payment Details <ion-icon
+        name="chevron-down-outline"></ion-icon>
+    </div>
+
+
+  </div>
+  <ng-container *ngIf="viewadd_pay">
+    <div *ngFor="let item of data">
+      <div *ngIf="item.status == 'processing'">
+        <div class="portion shipped">
+          <div class="shipping_details">
+            <div class="order_cover">
+              <h3>Shipping Details</h3>
+              <div class="ship_del">
+                Navpreet Singh<br><span>9874,Ludhiana 141003,Punjab,India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portion shipped">
+          <div class="payment_details">
+            <h3>Payment Summary</h3>
+            <div class="order_table">
+              <ul class="body">
+                <!-- <li>
+                  <div class="del"><strong>MRP :</strong></div>
+                  <div class="del">{{item.total}}</div>
+                </li> -->
+                <li>
+                  <div class="del"><strong>GST :</strong></div>
+                  <div class="del">{{ item.total_tax }}</div>
+                </li>
+                <li>
+                  <div class="del" class="del"><strong>Item Discount :</strong></div>
+                  <div class="del">(-) {{ item.discount_total}}</div>
+                </li>
+                <li>
+                  <div class="del"><strong>Order Total :</strong></div>
+                  <div class="del">{{ item.total }}</div>
+                <li>
+              </ul>
+              <ul class="foot">
+                <li>
+                  <div class="del"><strong>Amount Paid</strong></div>
+                  <div class="del"><strong>{{ item.total }}</strong></div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

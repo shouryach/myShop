@@ -1,0 +1,22 @@
+.oders_details_back{
+    width: 100%; height: auto; padding: 18px; text-align: center;
+    .no_order{
+        font-size: 20px; color: #000; font-size: 20px; font-weight: 600;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .oders_details_back{
+        .no_order{
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width:500px){
+    .oders_details_back{
+        .no_order{
+            font-size: 12px;
+        }
+    }
+}
