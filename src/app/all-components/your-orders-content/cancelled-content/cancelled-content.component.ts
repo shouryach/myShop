@@ -11,6 +11,7 @@ export class CancelledContentComponent implements OnInit {
   data: any;
   lineItems: any;
   flag: boolean = false;
+  date : string;
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
@@ -26,6 +27,8 @@ export class CancelledContentComponent implements OnInit {
         console.log(i.status);
         if (i.status === "cancelled") {
           this.flag = true;
+          this.date = i.date_created;
+          this.date = this.date.substring(0, 10);
           i.line_items.forEach(x => {
             console.log("Inside 2nd for loop: " + i.status);
             this.lineItems = x;

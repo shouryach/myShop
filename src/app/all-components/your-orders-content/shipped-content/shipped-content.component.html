@@ -1,19 +1,21 @@
 <div class="oders_details_back">
 
-  <div class="portion">
-    <div *ngIf="flag">
-      <div *ngFor="let item of data">
-        <div *ngIf="item.status == 'processing'">
-          <div *ngFor="let i of item.line_items">
+
+  <div *ngIf="flag">
+    <div *ngFor="let item of data">
+
+      <div *ngIf="item.status == 'processing'">
+        <div *ngFor="let i of item.line_items">
+          <div class="portion">
             <div class="order_cover">
               <div class="order_pending">
                 <img src="assets/images/orders_avator.jpg" alt="">
                 <h2>{{ i.name }}</h2>
-                <div class="price"><span class="offer_price">{{ i.price }}</span> 
+                <div class="price"><span class="offer_price">Rs. {{ i.price }}</span>
                   <!-- <span class="main_price">Rs. 999</span>
                   <span class="off_price">(52% OFF)</span> -->
                 </div>
-                <div class="date">{{ item.date_created}}</div>
+                <div class="date">{{ date}}</div>
                 <div class="status">
                   <div class="status_highlight">{{ item.status }}</div>
                   <div class="order_no">Order No.#{{ item.id }}</div>
@@ -33,17 +35,21 @@
         </div>
       </div>
     </div>
-    <div *ngIf="!flag">
-      <div class="oders_details_back">
-        <div class="no_order">No Orders to Show</div>
-      </div>
+  </div>
+  <div class="portion">
+  <div *ngIf="!flag">
+    <div class="oders_details_back">
+      <div class="no_order">No Orders to Show</div>
     </div>
+  </div>
+  
     <div class="address_bar" (click)="view_add()" [class.rotate]="rotate">View Address & Payment Details <ion-icon
         name="chevron-down-outline"></ion-icon>
     </div>
-
-
   </div>
+
+
+
   <ng-container *ngIf="viewadd_pay">
     <div *ngFor="let item of data">
       <div *ngIf="item.status == 'processing'">
@@ -52,7 +58,7 @@
             <div class="order_cover">
               <h3>Shipping Details</h3>
               <div class="ship_del">
-                Navpreet Singh<br><span>9874,Ludhiana 141003,Punjab,India</span>
+                {{ name }}<br><span>{{ address }}a</span>
               </div>
             </div>
           </div>

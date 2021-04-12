@@ -7,13 +7,14 @@
                         <div class="order_pending">
                             <img src="assets\images\orders_avator.jpg" alt="">
                             <h2>{{ i.name }}</h2>
-                            <div class="price"><span class="offer_price"></span> <span class="main_price">Rs. 999</span>
-                                <span class="off_price">(52% OFF)</span>
+                            <div class="price"><span class="offer_price">Rs. {{ item.total }}</span> 
+                                <!-- <span class="main_price">Rs. 999</span>
+                                <span class="off_price">(52% OFF)</span> -->
                             </div>
-                            <div class="date">5 March 2020</div>
+                            <div class="date">{{ item.date_created | slice : 0:10 }}</div>
                             <div class="status">
                                 <div class="status_highlight">{{ item.status }}</div>
-                                <div class="order_no">Order No.#78946</div>
+                                <div class="order_no">Order No.#{{item.id}}</div>
                             </div>
                         </div>
                     </div>
