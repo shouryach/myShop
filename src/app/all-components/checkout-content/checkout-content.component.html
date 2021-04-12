@@ -2,7 +2,7 @@
   <div class="wrap">
     <div class="avail_offer">
 
-      <ul class="list">
+      <!-- <ul class="list">
         <li>5% Unlimited Cashback on Flipkart Axis Bank Credit
           Card. TCA</li>
         <ng-container *ngIf="avail">
@@ -15,12 +15,12 @@
           <li>10% Supercash up to Rs. 20 on transaction with
             MobiKwik. TCA</li>
         </ng-container>
-      </ul>
-      <div class="show_hide" (click)="expand()" [class.active]="active">
+      </ul> -->
+      <!-- <div class="show_hide" (click)="expand()" [class.active]="active">
         <span *ngIf="more">show more</span>
         <span *ngIf="less">show less</span>
         <ion-icon name="chevron-down-outline"></ion-icon>
-      </div>
+      </div> -->
 
     </div>
 
@@ -87,17 +87,17 @@
             <ul class="body">
               <li>
                 <div class="del">Order Total :</div>
-                <div class="del">549</div>
+                <div class="del">{{this.total}}</div>
               <li>
-              <li>
+              <!-- <li>
                 <div class="del">Platform Handling Fee</div>
                 <div class="del free"><span>99</span> FREE</div>
-              </li>
+              </li> -->
             </ul>
             <ul class="foot">
               <li>
                 <div class="del"><strong>Total</strong></div>
-                <div class="del"><strong>549</strong></div>
+                <div class="del"><strong>{{this.total}}</strong></div>
               </li>
             </ul>
           </div>

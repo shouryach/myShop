@@ -16,7 +16,7 @@ export class ShoppingBagContentComponent implements OnInit {
   activelike: boolean = false;
   items=[];
   wishIcon= [];
-
+  variationsdetils:any;
   price=0;
   orderTotal=0;
   total=0;
@@ -49,9 +49,9 @@ export class ShoppingBagContentComponent implements OnInit {
         this.productService.getVariationsDetails(pid,vid).subscribe(data=>{
           //console.log(data);
         
-          let vdata = data;
-          innerObj['color'] = vdata.attributes[0].option;
-          this.price =  Number(this.price)+ Number(vdata.price);
+          this.variationsdetils = data;
+          innerObj['color'] = this.variationsdetils.attributes[0].option;
+          this.price =  Number(this.price)+ Number(this.variationsdetils.price);
           this.orderTotal = this.price;
           this.total = this.price;
           //items.push("product":data,);

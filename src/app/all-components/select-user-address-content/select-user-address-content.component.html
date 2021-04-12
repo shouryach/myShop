@@ -1,20 +1,35 @@
 <div class="default_address_back">
   <div class="portion">
     <div class="cover" >
-      <label>
+      <label *ngFor="let item of billingDetails">
         <span></span>
         <div class="location">Home</div>
-        <strong>Gursewak Singh</strong>
-        <address>#8733,St No.87,Kot Mangal Singh<br>Janta Nagar<br>Ludhiana, Punjab 141003<br><br>Mobile: <b>9988556633</b></address>
+        <strong>{{item.billing_first_name}} {{item.billing_last_name}}</strong>
+        <address>{{item.billing_address_1}}<br>{{item.billing_postcode}}<br>Mobile: <b>{{item.billing_phone}}</b></address>
       </label>
-      <div class="add_new_add_back">
-        <ion-button expand="block" fill="clear" [routerLink]="['/add-new-address']" routerLinkActive="router-link-active" >Change or add address</ion-button>
+      <br>
+      <label *ngIf="billing1_first_name">
+        <span></span>
+        <div class="location">Home</div>
+        <strong>{{billing1_first_name}}</strong>
+        <address>{{billing1_address_1}}<br>{{billing1_postcode}}<br>Mobile: <b>{{billing1_phone}}</b></address>
+      </label>
+      <br>
+      <label *ngIf="billing2_first_name">
+        <span></span>
+        <div class="location">Home</div>
+        <strong>{{billing2_first_name}}</strong>
+        <address>{{billing2_address_1}}<br>{{billing2_postcode}}<br>Mobile: <b>{{billing2_phone}}</b></address>
+      </label>
+
+      <div class="add_new_add_back" *ngIf="this.addbilling !=false">
+        <ion-button expand="block" fill="clear" [routerLink]="['/add-new-address']" routerLinkActive="router-link-active" >Add address</ion-button>
       </div>
     </div>
   </div>
 </div>
 <div class="clear"></div>
-<div class="estimate_address_details">
+<!-- <div class="estimate_address_details">
   <ion-label>Delivery Estimates</ion-label>
   <div class="details_back">
     <div class="note"><strong>Please Note:</strong> Dear customer, our delivery timelines are
@@ -29,7 +44,7 @@
         </div>
       </div>
   </div>
-</div>
+</div> -->
 <div class="clear"></div>
 <div class="oders_details_back">
   <div class="portion">
@@ -40,17 +55,14 @@
           
           <li>
             <div class="del">Order Total :</div>
-            <div class="del">549</div>
-          <li>
-            <li>
-              <div class="del">Platform Handling Fee</div>
-              <div class="del free"><span>99</span> FREE</div>
-            </li>
+            <div class="del">{{this.total}}</div>
+          </li>
+            
         </ul>
         <ul class="foot">
           <li>
             <div class="del"><strong>Total</strong></div>
-            <div class="del"><strong>549</strong></div>
+            <div class="del"><strong>{{this.total}}</strong></div>
           </li>
         </ul>
       </div>
@@ -62,7 +74,7 @@
     <ion-row>
       <ion-col size="5">
         <div class="price">
-          549<br><span>VIEW DETAILS</span>
+          {{this.total}}<br><span>VIEW DETAILS</span>
         </div>
         
       </ion-col>

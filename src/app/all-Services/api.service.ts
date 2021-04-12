@@ -19,6 +19,7 @@ export class ApiService {
     this.plt.ready().then(() => {
       this.storage.get(JWT_KEY).then(data => {
         if (data) {
+          //console.log(data);
           this.user.next(data);
         }
       })
@@ -60,6 +61,11 @@ export class ApiService {
 
   getUserByEmail(email) {
     return this.http.get<any>("https://www.millionerbychoice.in/wp-json/myShop/v2/userdetails?email="+email);
+    //return this.http.get<any>(" https://jsonplaceholder.typicode.com/todos/1");
+  }
+
+  getUserBillingEmail(email) {
+    return this.http.get<any>("https://www.millionerbychoice.in/wp-json/myShop/v2/userbilling?email="+email);
     //return this.http.get<any>(" https://jsonplaceholder.typicode.com/todos/1");
   }
 

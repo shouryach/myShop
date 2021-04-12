@@ -33,5 +33,12 @@ export class ProductService {
     }&consumer_secret=${this.consumerSecret}`);
   } 
 
+  
+  public get_billing(uid){
+    return this.http.get(`${this.url}/wp-json/wc/v3/customers/${uid}&consumer_key=${
+      this.consumerKey
+    }&consumer_secret=${this.consumerSecret}`);
+  }
+
 
 }
